@@ -9,7 +9,7 @@ set number
 map <Space> :noh<cr>
 
 syntax on
-color default
+color elflord
 
 set nocompatible              " be iMproved
 filetype off                  " required!

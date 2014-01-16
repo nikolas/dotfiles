@@ -20,6 +20,11 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; key bindings
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-right-command-modifier 'meta)
+  )
+
 ;(add-to-list 'load-path "~/.emacs.d/vendor/")
 ;(add-to-list 'load-path "~/.emacs.d/elpa/")
 
@@ -29,9 +34,11 @@
 
 (scroll-bar-mode -1)
 
+(global-set-key "\C-cg" 'goto-line)
+
 ;(require 'git-gutter)
 ;; If you enable global minor mode
-(global-git-gutter-mode t)
+;(global-git-gutter-mode t)
 ;; Jump to next/previous hunk
 (global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
 (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
@@ -43,7 +50,7 @@
 ;; No tabs...
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 2)
-(standard-display-ascii ?\t "^I")
+;(standard-display-ascii ?\t "^I")
 ;; if indent-tabs-mode is off, untabify before saving
 (add-hook 'write-file-hooks 
          (lambda () (if (not indent-tabs-mode)
@@ -68,5 +75,8 @@
 (window-number-mode 1)
 (window-number-meta-mode)
 
-(setq sml/theme 'light)
 (sml/setup)
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-clarity)
