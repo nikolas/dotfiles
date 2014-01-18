@@ -32,6 +32,7 @@
     (load "path"))
 
 (scroll-bar-mode -1)
+(fringe-mode 0)
 
 (global-set-key "\C-cg" 'magit-status)
 (global-set-key "\C-cl" 'goto-line)
