@@ -10,7 +10,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(sml/hidden-modes (quote (" hl-p projectile-mode")))
+ '(sml/hidden-modes (quote (" hl-p")))
  '(standard-indent 2)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -25,16 +25,16 @@
   (setq mac-right-command-modifier 'meta)
   )
 
-;(add-to-list 'load-path "~/.emacs.d/vendor/")
+(add-to-list 'load-path "~/.emacs.d/elisp/")
 ;(add-to-list 'load-path "~/.emacs.d/elpa/")
 
 (if (not (getenv "TERM_PROGRAM"))
-         (setenv "PATH"
-         (shell-command-to-string "source $HOME/.bash_profile && printf $PATH")))
+    (load "path"))
 
 (scroll-bar-mode -1)
 
-(global-set-key "\C-cg" 'goto-line)
+(global-set-key "\C-cg" 'magit-status)
+(global-set-key "\C-cl" 'goto-line)
 
 ;(require 'git-gutter)
 ;; If you enable global minor mode
@@ -60,7 +60,7 @@
 (menu-bar-mode -1)
 ;(global-linum-mode t)
 
-(projectile-global-mode)
+
 (display-time-mode 1)
 
 ;; automatically clean up bad whitespace
@@ -80,3 +80,5 @@
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-clarity)
+
+(projectile-global-mode)
