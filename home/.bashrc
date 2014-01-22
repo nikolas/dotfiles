@@ -16,9 +16,9 @@ alias ec='emacsclient -c'
 alias ekill='emacsclient -e "(kill-emacs)"'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  alias ls='ls -F --color'
+  alias ls='ls -hF --color'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  alias ls='ls -FG'
+  alias ls='ls -hFG'
 fi
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"

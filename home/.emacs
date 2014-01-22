@@ -12,7 +12,8 @@
  '(column-number-mode t)
  '(sml/hidden-modes (quote (" hl-p")))
  '(standard-indent 2)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(vc-follow-symlinks t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,6 +34,7 @@
 
 (scroll-bar-mode -1)
 (fringe-mode 0)
+(show-paren-mode 1)
 
 (global-set-key "\C-cg" 'magit-status)
 (global-set-key "\C-cl" 'goto-line)
@@ -70,7 +72,7 @@
 ;(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
 (global-whitespace-cleanup-mode t)
 
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 (require 'window-number)
 (window-number-mode 1)
@@ -82,4 +84,35 @@
 (color-theme-initialize)
 (color-theme-clarity)
 
+
 (projectile-global-mode)
+
+
+(require 'rvm)
+(rvm-use-default)
+
+
+(set-face-attribute 'default nil :height 140)
+
+
+(require 'rcirc)
+(setq rcirc-server-alist
+      '(("irc.esper.net" :channels ("#datafruitsouth"))))
+(setq rcirc-default-nick "Linden_Tibbets")
+(eval-after-load 'rcirc '(require 'rcirc-color))
+
+
+(setq gnus-select-method
+      '(nnimap "gmail"
+         (nnimap-address "imap.gmail.com")
+         (nnimap-server-port 993)
+         (nnimap-stream ssl)))
+
+(setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+      smtpmail-auth-credentials '(("smtp.gmail.com" 587
+           "user@gmail.com" nil))
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587
+      gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
