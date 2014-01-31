@@ -22,3 +22,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
