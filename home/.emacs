@@ -39,9 +39,9 @@
 (global-set-key "\C-cg" 'magit-status)
 (global-set-key "\C-cl" 'goto-line)
 
-;(require 'git-gutter)
+(require 'git-gutter)
 ;; If you enable global minor mode
-;(global-git-gutter-mode t)
+(global-git-gutter-mode t)
 ;; Jump to next/previous hunk
 (global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
 (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
