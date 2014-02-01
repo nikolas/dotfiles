@@ -21,6 +21,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   alias ls='ls -hFG'
 fi
 
+#vimpager=$(which vimpager)
+#if [[ -x "$vimpager" ]]; then
+#  export PAGER=vimpager
+#fi
+
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

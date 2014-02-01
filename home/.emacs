@@ -38,6 +38,8 @@
 
 (global-set-key "\C-cg" 'magit-status)
 (global-set-key "\C-cl" 'goto-line)
+(require 'ember-rails)
+(global-set-key "\C-c,e" 'ember-rails-toggle-file)
 
 (require 'git-gutter)
 ;; If you enable global minor mode
@@ -82,7 +84,7 @@
 
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-clarity)
+(color-theme-midnight)
 
 
 (projectile-global-mode)
@@ -99,7 +101,7 @@
 (setq rcirc-server-alist
       '(("irc.esper.net" :channels ("#datafruitsouth"))))
 (setq rcirc-default-nick "Linden_Tibbets")
-(eval-after-load 'rcirc '(require 'rcirc-color))
+;(eval-after-load 'rcirc '(require 'rcirc-color))
 
 
 (setq gnus-select-method
