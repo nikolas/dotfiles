@@ -15,17 +15,13 @@
     (setq currentFileDir
           (replace-regexp-in-string "[\._[:alnum:]]*$" "" buffer-file-name))
     (setq isInRails (if (string-match "\.rb$" currentFile) t nil))
-    (setq targetFile (if isInRails
-                         (concat
-                          (car (split-string currentFile "[.]")) ".js.coffee")
-                       (concat (car (split-string currentFile "[.]")) ".rb")))
-    (setq targetDir (if isInRails
-                        (make-list 1 (file-truename
-                                      (concat
-                                       currentFileDir
-                                       "../assets/javascripts/")))
-                      (make-list 1 (file-truename
-                                    (concat currentFileDir "../../../")))))
+    (setq targetFile (concat (car (split-string currentFile "[.]"))
+                             (if isInRails ".js.coffee" ".rb")))
+    (setq targetDir (make-list 1 (file-truename
+                                  (concat currentFileDir
+                                          (if isInRails
+                                              "../assets/javascripts"
+                                            "../../..")))))
     (setq locatedTargetFile (locate-file targetFile targetDir))
     (if locatedTargetFile
         (find-file-existing locatedTargetFile)
