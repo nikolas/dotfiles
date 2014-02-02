@@ -8,16 +8,27 @@
 (defun ember-rails-toggle-file ()
   "Toggle between an ember file and its corresponding rails file."
   (interactive)
-  (let (currentFile emberFile railsFile emberDir railsDir)
+  (let (currentFile currentFileDir emberFile railsFile emberDir railsDir)
     (setq currentFile
           (mapconcat 'identity
                      (last (split-string buffer-file-name "/") 2) "/"))
-    (setq emberFile (concat (car (split-string currentFile "[.]")) ".js.coffee"))
-    (setq railsFile (concat (car (split-string currentFile "[.]")) ".rb"))
-    (setq emberDir "../assets/javascripts/")
-    (setq railsDir "../../../")
-    (if (string-match "\.rb$" currentFile)
-        (find-file-existing (concat emberDir emberFile))
-        (find-file-existing (concat railsDir railsFile)))))
+    (setq currentFileDir
+          (replace-regexp-in-string "[\._[:alnum:]]*$" "" buffer-file-name))
+    (setq isInRails (if (string-match "\.rb$" currentFile) t nil))
+    (setq targetFile (if isInRails
+                         (concat
+                          (car (split-string currentFile "[.]")) ".js.coffee")
+                       (concat (car (split-string currentFile "[.]")) ".rb")))
+    (setq targetDir (if isInRails
+                        (make-list 1 (file-truename
+                                      (concat
+                                       currentFileDir
+                                       "../assets/javascripts/")))
+                      (make-list 1 (file-truename
+                                    (concat currentFileDir "../../../")))))
+    (setq locatedTargetFile (locate-file targetFile targetDir))
+    (if locatedTargetFile
+        (find-file-existing locatedTargetFile)
+      (error (concat "Can't find " targetFile " in " (car targetDir))))))
 
 (provide 'ember-rails)

@@ -38,6 +38,7 @@
 
 (global-set-key "\C-cg" 'magit-status)
 (global-set-key "\C-cl" 'goto-line)
+(global-set-key "\C-ce" 'edebug-defun)
 (require 'ember-rails)
 (global-set-key "\C-c,e" 'ember-rails-toggle-file)
 
