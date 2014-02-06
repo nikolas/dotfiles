@@ -42,19 +42,22 @@
 (scroll-bar-mode -1)
 (fringe-mode 0)
 (show-paren-mode 1)
+(setq vc-handled-backends ())
 
 (global-set-key "\C-cg" 'magit-status)
 (global-set-key "\C-cl" 'goto-line)
 (global-set-key "\C-ce" 'edebug-defun)
-(require 'ember-rails)
-(global-set-key "\C-c,e" 'ember-rails-toggle-file)
+(when (require 'ember-rails nil 'noerror)
+  (global-set-key "\C-c,e" 'ember-rails-toggle-file)
+  )
 
-(require 'git-gutter)
-;; If you enable global minor mode
-(global-git-gutter-mode t)
-;; Jump to next/previous hunk
-(global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
-(global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
+(when (require 'git-gutter nil 'noerror)
+  ;; If you enable global minor mode
+  (global-git-gutter-mode t)
+  ;; Jump to next/previous hunk
+  (global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
+  (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
+  )
 
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
@@ -84,20 +87,23 @@
 
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
-(require 'window-number)
-(window-number-mode 1)
-(window-number-meta-mode)
+(when (require 'window-number nil 'noerror)
+  (window-number-mode 1)
+  (window-number-meta-mode)
+  )
 
 
-(require 'color-theme-sanityinc-tomorrow)
-(color-theme-sanityinc-tomorrow-bright)
+(when (require 'color-theme-sanityinc-tomorrow nil 'noerror)
+  (color-theme-sanityinc-tomorrow-bright)
+  )
 
 
 (projectile-global-mode)
 
 
-(require 'rvm)
-(rvm-use-default)
+(when (require 'rvm nil 'noerror)
+  (rvm-use-default)
+  )
 
 
 (set-face-attribute 'default nil :height 140)
