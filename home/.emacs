@@ -40,7 +40,7 @@
     (load "path"))
 
 (if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (boundp 'fring-mode) (fringe-mode 0))
+(if (boundp 'fringe-mode) (fringe-mode 0))
 (show-paren-mode 1)
 (setq vc-handled-backends ())
 

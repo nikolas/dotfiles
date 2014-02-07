@@ -9,7 +9,7 @@ set sw=2
 map <Space> :noh<cr>
 
 syntax on
-color elflord
+color pablo
 
 set nocompatible              " be iMproved
 filetype off                  " required!
