@@ -39,8 +39,8 @@
 (if (not (getenv "TERM_PROGRAM"))
     (load "path"))
 
-(scroll-bar-mode -1)
-(fringe-mode 0)
+(if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (boundp 'fring-mode) (fringe-mode 0))
 (show-paren-mode 1)
 (setq vc-handled-backends ())
 
@@ -110,9 +110,11 @@
 
 
 (require 'rcirc)
+(rcirc-track-minor-mode 1)
+(setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY"))
 (setq rcirc-server-alist
-      '(("irc.esper.net" :channels ("#datafruitsouth"))
-       ("irc.freenode.net" :channels ("#emberjs" "#emberjs-dev"))))
+      '(("chat.freenode.net" :channels ("#tesc"))
+        ("irc.esper.net" :channels ("#datafruitsouth"))))
 (setq rcirc-default-nick "dobie_gillis")
 
 
