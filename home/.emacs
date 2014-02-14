@@ -113,7 +113,7 @@
 (rcirc-track-minor-mode 1)
 (setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY"))
 (setq rcirc-server-alist
-      '(("chat.freenode.net" :channels ("#tesc"))
+      '(("chat.freenode.net" :channels ("#tesc" "#sxemacs"))
         ("irc.esper.net" :channels ("#datafruitsouth"))))
 (setq rcirc-default-nick "dobie_gillis")
 
