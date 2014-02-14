@@ -28,38 +28,16 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; key bindings
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-right-command-modifier 'meta)
-  )
-
 (add-to-list 'load-path "~/.emacs.d/elisp/")
-;(add-to-list 'load-path "~/.emacs.d/elpa/")
+(load-library "style")
+(load-library "keys")
+(load-library "modes")
 
 (if (not (getenv "TERM_PROGRAM"))
     (load "path"))
 
-(if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (boundp 'fringe-mode) (fringe-mode 0))
-(show-paren-mode 1)
 (setq vc-handled-backends ())
 
-(global-set-key "\C-cg" 'magit-status)
-(global-set-key "\C-cl" 'goto-line)
-(global-set-key "\C-ce" 'edebug-defun)
-(when (require 'ember-rails nil 'noerror)
-  (global-set-key "\C-c,e" 'ember-rails-toggle-file)
-  )
-
-(when (require 'git-gutter nil 'noerror)
-  ;; If you enable global minor mode
-  (global-git-gutter-mode t)
-  ;; Jump to next/previous hunk
-  (global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
-  (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
-  )
-
-(autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (setq scss-compile-at-save nil)
 
@@ -73,41 +51,14 @@
                         (untabify (point-min) (point-max)))
                      nil ))
 
-(menu-bar-mode -1)
-;(global-linum-mode t)
-
-
-(display-time-mode 1)
-
 ;; automatically clean up bad whitespace
 (setq whitespace-action '(auto-cleanup))
-;; only show bad whitespace
-;(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
-(global-whitespace-cleanup-mode t)
 
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
-(when (require 'window-number nil 'noerror)
-  (window-number-mode 1)
-  (window-number-meta-mode)
-  )
-
-
-(when (require 'color-theme-sanityinc-tomorrow nil 'noerror)
-  (color-theme-sanityinc-tomorrow-bright)
-  )
-
-
-(projectile-global-mode)
-
 
 (when (require 'rvm nil 'noerror)
   (rvm-use-default)
   )
-
-
-(set-face-attribute 'default nil :height 140)
-
 
 (require 'rcirc)
 (rcirc-track-minor-mode 1)
@@ -116,7 +67,6 @@
       '(("chat.freenode.net" :channels ("#tesc" "#sxemacs"))
         ("irc.esper.net" :channels ("#datafruitsouth"))))
 (setq rcirc-default-nick "dobie_gillis")
-
 
 (setq gnus-select-method
       '(nnimap "gmail"
@@ -134,3 +84,7 @@
       gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
 
 (setq mail-host-address "gmail.com")
+
+;~~~~~~~~~~----______________
+(shell)
+(server-start)

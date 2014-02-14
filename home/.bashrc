@@ -13,6 +13,7 @@ alias tobe='cd ~/src/ToBe'
 
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
+alias eq='emacs -Q'
 alias ekill='emacsclient -e "(kill-emacs)"'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
