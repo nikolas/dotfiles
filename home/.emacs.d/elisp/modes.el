@@ -23,5 +23,7 @@
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 2)
 
+(setq js-indent-level 2)
+
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
