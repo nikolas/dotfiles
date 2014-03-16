@@ -24,7 +24,3 @@ fi
 #if [[ -x "$vimpager" ]]; then
 #  export PAGER=vimpager
 #fi
-
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
