@@ -3,8 +3,6 @@ alias d='git diff'
 alias l='git log'
 alias gfo='git fetch origin'
 
-alias 4='ssh nik@50.116.28.134'
-
 alias be='bundle exec'
 alias br='bundle exec rake'
 alias bd='be rake db:migrate; be rake db:test:prepare'
