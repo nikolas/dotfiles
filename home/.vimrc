@@ -29,6 +29,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'groenewege/vim-less'
 
 filetype plugin indent on     " required!
 "
@@ -40,3 +41,4 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
+"

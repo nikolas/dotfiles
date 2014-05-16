@@ -1,6 +1,13 @@
-# -*- mode: gitignore; -*-
+# vim.gitignore
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
 
-*.sw[a-z]
+# Emacs.gitignore
+# -*- mode: gitignore; -*-
 *~
 \#*\#
 /.emacs.desktop
@@ -23,3 +30,9 @@ tramp
 
 # elpa packages
 /elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
