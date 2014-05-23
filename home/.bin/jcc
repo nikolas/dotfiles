@@ -1,19 +1,37 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python
+#
+# Mainly from here:
+#   https://developers.google.com/closure/compiler/docs/api-tutorial1
 #
 # jcc
 # Compile a JavaScript program with the google closure compiler, by connecting
 # to their api.
 #
 
-if [ -z $1 ] || [ "-h" == $1 ]; then
-  NAME=`basename $0`
-  echo "usage: $NAME program.js"
-  exit 1
-fi
+import httplib, urllib, sys
 
-FILENAME=$1
-CODE=`cat $FILENAME`
+# Define the parameters for the POST request and encode them in
+# a URL-safe format.
 
-COMPILED=`curl -s -d "output_info=compiled_code&output_format=text&compilation_level=SIMPLE_OPTIMIZATIONS&js_code=$CODE" 'http://closure-compiler.appspot.com/compile'`
+if len(sys.argv) <= 1 or sys.argv[1] == '-h':
+  print "usage: jcc program.js"
+  sys.exit(1)
 
-echo $COMPILED
+with open(sys.argv[1], 'r') as f:
+  code = f.read()
+
+params = urllib.urlencode([
+    ('js_code', code),
+    ('compilation_level', 'WHITESPACE_ONLY'),
+    ('output_format', 'text'),
+    ('output_info', 'compiled_code'),
+  ])
+
+# Always use the following value for the Content-type header.
+headers = { "Content-type": "application/x-www-form-urlencoded" }
+conn = httplib.HTTPConnection('closure-compiler.appspot.com')
+conn.request('POST', '/compile', params, headers)
+response = conn.getresponse()
+data = response.read()
+print data
+conn.close()
