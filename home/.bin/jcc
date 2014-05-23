@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# jcc
+# Compile a JavaScript program with the google closure compiler, by connecting
+# to their api.
+#
+
+if [ -z $1 ] || [ "-h" == $1 ]; then
+  NAME=`basename $0`
+  echo "usage: $NAME program.js"
+  exit 1
+fi
+
+FILENAME=$1
+CODE=`cat $FILENAME`
+
+COMPILED=`curl -s -d "output_info=compiled_code&output_format=text&compilation_level=SIMPLE_OPTIMIZATIONS&js_code=$CODE" 'http://closure-compiler.appspot.com/compile'`
+
+echo $COMPILED
