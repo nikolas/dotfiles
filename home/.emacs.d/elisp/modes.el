@@ -18,7 +18,8 @@
   (window-number-meta-mode)
   )
 
-(projectile-global-mode)
+(when (require 'projectile nil 'noerror)
+  (projectile-global-mode))
 
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 2)
