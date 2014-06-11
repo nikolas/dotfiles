@@ -3,8 +3,8 @@ set ai
 set si
 set hls
 set et
-set ts=2
-set sw=2
+set ts=4
+set sw=4
 "set number
 map <Space> :noh<cr>
 
@@ -30,6 +30,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'groenewege/vim-less'
+Plugin 'saltstack/salt-vim'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
