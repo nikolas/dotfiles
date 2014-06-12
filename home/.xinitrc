@@ -1,8 +1,11 @@
+#!/usr/bin/env bash
+
 pkill urxvtd
 
 xsetroot -solid orange &
-xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources &
 
 urxvtd &
 
-evilwm -term urxvtc
+#exec evilwm -term urxvtc
+exec fluxbox
