@@ -1,6 +1,8 @@
 pkill urxvtd
 
-xsetroot -solid black &
+xsetroot -solid orange &
+xrdb -merge ~/.Xresources
+
 urxvtd &
 
-evilwm -term urxtc
+evilwm -term urxvtc
