@@ -2,21 +2,19 @@ OPTIONS=showexp,showscore,time,color,!autopickup
 OPTIONS=autodig,fruit:Wendy's chicken sandwich,boulder:0
 OPTIONS=showrace,!cmdassist
 OPTIONS=disclose:+aigcv
+OPTIONS=msg_window:combination
+OPTIONS=number_pad:0
+OPTIONS=suppress_alert:3.4.3
 
 # not sun-friendly :P
 OPTIONS=DECgraphics,hilite_pet,lit_corridor
-
-OPTIONS=msg_window:combination
-
-OPTIONS=number_pad:0
-
-OPTIONS=suppress_alert:3.4.3
 
 # The following are options not in vanilla NetHack:
 #
 #OPTIONS=use_darkgray
 #
-OPTIONS=showborn
+# Not in vanilla
+#OPTIONS=showborn,showbuc
 #
 #OPTIONS=hp_monitor
 ## Name and rank background correspond to statuscolor HP colors.
@@ -46,12 +44,6 @@ MENUCOLOR=" holy "=green
 MENUCOLOR=" cursed "=red
 MENUCOLOR=" unholy "=red
 MENUCOLOR=" cursed .* (being worn)"=orange&underline
-#
 ##OPTIONS=paranoid_hit,paranoid_quit,paranoid_remove
-#
 OPTIONS=sortloot:full
-#
-OPTIONS=showbuc
-#
 ##OPTIONS=win_edge
-#
