@@ -2,8 +2,8 @@ URxvt*foreground: white
 URxvt*background: black
 URxvt*scrollBar: false
 
-URxvt.font: xft:Mono:size=12:antialias=false
-URxvt.boldFont: xft:Mono:bold:size=12:antialias=false
+URxvt.font: -*-neep-medium-*-*-*-15-*-*-*-*-*-*-*
+URxvt.boldFont: -*-neep-bold-*-*-*-15-*-*-*-*-*-*-*
 
 *color0:  #2E3436
 *color1:  #a40000
