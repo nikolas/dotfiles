@@ -1,7 +1,10 @@
+alias b='bzr'
+
 alias s='git status'
 alias d='git diff'
 alias l='git log'
 alias gfo='git fetch origin'
+alias gfu='git fetch upstream'
 
 alias be='bundle exec'
 alias br='bundle exec rake'
