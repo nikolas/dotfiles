@@ -1,10 +1,10 @@
 (menu-bar-mode -1)
 (display-time-mode 1)
-(global-whitespace-cleanup-mode t)
 (show-paren-mode 1)
 (if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (boundp 'fringe-mode) (fringe-mode 0))
 
+;; git-gutter
 (when (require 'git-gutter nil 'noerror)
   ;; If you enable global minor mode
   (global-git-gutter-mode t)
@@ -13,13 +13,23 @@
   (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
   )
 
+;; org
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+(if (file-exists-p "~/org")
+  (setq org-agenda-files (directory-files "~/org" t "\.org$")))
+
+;; projectile
+(when (require 'projectile nil 'noerror)
+  (projectile-global-mode))
+
+;; window-number
 (when (require 'window-number nil 'noerror)
   (window-number-mode 1)
   (window-number-meta-mode)
   )
-
-(when (require 'projectile nil 'noerror)
-  (projectile-global-mode))
 
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 2)
@@ -28,10 +38,3 @@
 
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
-
-; org mode
-(require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
-(setq org-agenda-files (directory-files "~/org" t "\.org$"))
