@@ -44,21 +44,9 @@
 ;; No tabs...
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 2)
-;(standard-display-ascii ?\t "^I")
-;; if indent-tabs-mode is off, untabify before saving
-(add-hook 'write-file-hooks 
-         (lambda () (if (not indent-tabs-mode)
-                        (untabify (point-min) (point-max)))
-                     nil ))
 
 ;; automatically clean up bad whitespace
 (setq whitespace-action '(auto-cleanup))
-
-;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
-(when (require 'rvm nil 'noerror)
-  (rvm-use-default)
-  )
 
 (require 'rcirc)
 (rcirc-track-minor-mode 1)
