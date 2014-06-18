@@ -8,4 +8,4 @@ xrdb -merge ~/.Xresources &
 urxvtd &
 
 #exec evilwm -term urxvtc
-exec fluxbox
+exec xmonad
