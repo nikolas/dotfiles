@@ -2,8 +2,9 @@
 
 pkill urxvtd
 
-xsetroot -solid orange &
-xrdb -merge ~/.Xresources &
+xsetroot -solid orange
+xsetroot -cursor_name left_ptr
+xrdb -merge ~/.Xresources
 
 urxvtd &
 
