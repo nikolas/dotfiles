@@ -23,8 +23,3 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   alias ls='ls -hFG'
 fi
-
-#vimpager=$(which vimpager)
-#if [[ -x "$vimpager" ]]; then
-#  export PAGER=vimpager
-#fi

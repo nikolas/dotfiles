@@ -4,6 +4,10 @@
 (if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (boundp 'fringe-mode) (fringe-mode 0))
 
+;; dirtree
+(when (require 'dirtree nil 'noerror)
+  )
+
 ;; git-gutter
 (when (require 'git-gutter nil 'noerror)
   ;; If you enable global minor mode
