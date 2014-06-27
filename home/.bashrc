@@ -2,7 +2,7 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-export PATH="$HOME/.bin:$HOME/local/bin:$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/local/bin:$HOME/.cabal/bin:$HOME/node_modules/.bin:$PATH"
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 

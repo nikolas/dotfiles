@@ -9,7 +9,7 @@ set sw=4
 map <Space> :noh<cr>
 
 syntax on
-color desert
+color ron
 
 set nocompatible              " be iMproved
 filetype off                  " required!
