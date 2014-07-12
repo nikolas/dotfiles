@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo -n "How many minutes? "
+read limit
+
+echo "$limit minutes left..."
+
+counter=0
+while [ $counter != $limit ]; do
+    echo "$counter minutes so far...";
+    sleep 60
+    let "counter = $counter + 1"
+    if [ $counter == $limit ]; then
+       echo
+       echo "$counter minutes passed"
+       echo -e '\a' >&2
+       exit 0
+    fi
+done
+
