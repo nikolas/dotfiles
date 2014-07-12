@@ -2,17 +2,27 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+sd_retval_cond () {
+   local ret_val=$?
+   if [[ "$ret_val" = "0" ]]; then echo -e "$1"; else echo -e "$2"; fi
+   return $ret_val
+}
+color_my_prompt () {
+    local RESET='\[\e[0m\]'     local BOLD='\[\e[1m\]'
+    local YELLOW='\[\e[33m\]'   local BLUE='\[\e[34m\]'
+    local BLACK='\[\e[30m\]'    local RED='\[\e[31m\]'
+    local PINK='\[\e[35m\]'     local CYAN='\[\e[36m\]'
+    local GREEN='\[\e[32m\]'    local GRAY='\[\e[37m\]'
+
+    export PS1="$BOLD$BLUE(\u@\h) \$(sd_retval_cond '$GREEN' '$RED')\$(sd_retval_cond :\) \":( \$?\") $YELLOW(\$(date +%H:%M:%S)) $PINK\w\$(__git_ps1 ' $CYAN[%s]')\n$RESET$BLUE\$$RESET "
+}
+
+export EDITOR=vim
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM="auto"
 export PATH="$HOME/.bin:$HOME/local/bin:$HOME/.cabal/bin:$HOME/node_modules/.bin:$PATH"
+color_my_prompt
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-
-function color_my_prompt {
-    local __user_and_host="\[\033[01;32m\]\u@\h"
-    local __cur_location="\[\033[01;34m\]\w"
-    local __git_branch_color="\[\033[31m\]"
-    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-    local __prompt_tail="\[\033[35m\]$"
-    local __last_color="\[\033[00m\]"
-    export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
-}
-color_my_prompt

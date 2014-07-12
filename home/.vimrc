@@ -1,17 +1,25 @@
+set nocompatible
+
+" keys
+map <Space> :noh<cr>
+
+" appearance
+syntax on
+color ron
 set ruler
+
+" formatting
 set ai
 set si
-set hls
 set et
 set ts=4
 set sw=4
-"set number
-map <Space> :noh<cr>
 
-syntax on
-color ron
+" search
+set hls
+set ignorecase
 
-set nocompatible              " be iMproved
+" Vundle
 filetype off                  " required!
 
 set rtp+=~/.vim/bundle/Vundle.vim

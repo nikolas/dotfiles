@@ -8,14 +8,12 @@ alias gfu='git fetch upstream'
 
 alias be='bundle exec'
 alias br='bundle exec rake'
-alias bd='be rake db:migrate; be rake db:test:prepare'
-
-alias tobe='cd ~/src/ToBe'
 
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias eq='emacs -nw -Q'
 alias ekill='emacsclient -e "(kill-emacs)"'
+
 alias xup='xrdb ~/.Xresources'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
