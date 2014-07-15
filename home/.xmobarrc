@@ -3,8 +3,8 @@ Config {
     commands = [
         Run Weather "KNYC" [
             "-t","<station>: <tempF>F",
-            "-L", "18",
-            "-H", "25",
+            "-L", "64",
+            "-H", "77",
             "--normal", "green",
             "--high", "red",
             "--low", "lightblue" ] 36000,
