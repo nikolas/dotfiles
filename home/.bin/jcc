@@ -22,7 +22,7 @@ with open(sys.argv[1], 'r') as f:
 
 params = urllib.urlencode([
     ('js_code', code),
-    ('compilation_level', 'WHITESPACE_ONLY'),
+    ('compilation_level', 'SIMPLE_OPTIMIZATIONS'),
     ('output_format', 'text'),
     ('output_info', 'compiled_code'),
   ])
