@@ -1,16 +1,3 @@
 Config {
-    font = "-*-neep-medium-*-*-*-13-*-*-*-*-*-*-*",
-    commands = [
-        Run Weather "KNYC" [
-            "-t","<station>: <tempF>F",
-            "-L", "64",
-            "-H", "77",
-            "--normal", "green",
-            "--high", "red",
-            "--low", "lightblue" ] 36000,
-        Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-    ],
-    sepChar = "%",
-    alignSep = "}{",
-    template = "}{ %KNYC% | <fc=#ee9a00>%date%</fc>"
+    font = "-*-neep-medium-*-*-*-13-*-*-*-*-*-*-*"
 }
