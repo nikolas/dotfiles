@@ -26,7 +26,7 @@ color_my_prompt () {
     local PINK='\[\e[35m\]'     local CYAN='\[\e[36m\]'
     local GREEN='\[\e[32m\]'    local GRAY='\[\e[37m\]'
 
-    export PS1="$BOLD$BLUE(\u@\h) \$(sd_retval_cond '$GREEN' '$RED')\$(sd_retval_cond :\) \":( \$?\") $YELLOW(\$(date +%H:%M))\$(__git_ps1 ' $CYAN[%s]')\n$RESET$BLUE$PINK\w \#$RESET "
+    export PS1="$BOLD$BLUE(\u@\h) \$(sd_retval_cond '$GREEN' '$RED')\$(sd_retval_cond :\) \":( \$?\") $YELLOW(\$(date +%H:%M))\$(__git_ps1 ' $CYAN[%s]')\n$RESET$BLUE$PINK\w #$RESET "
 }
 
 export EDITOR=vim
