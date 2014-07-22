@@ -1,3 +1,5 @@
+alias ':P'='homeshick pull dotfiles'
+
 alias b='bzr'
 
 alias s='git status'
