@@ -53,5 +53,5 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle commands are not allowed.
 "
 
-let NERDTreeIgnore=['\.o$', '\~$']
+let NERDTreeIgnore=['\.pyc$', '\.o$', '\~$']
 let NERDTreeMinimalUI=1
