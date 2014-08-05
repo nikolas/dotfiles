@@ -34,7 +34,9 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
-export PATH="$HOME/.bin:$HOME/local/bin:$HOME/.cabal/bin:$HOME/node_modules/.bin:$PATH"
+export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/local/bin:$PATH"
+
 color_my_prompt
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
