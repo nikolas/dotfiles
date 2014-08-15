@@ -17,7 +17,6 @@ set sw=4
 
 " search
 set hls
-set ignorecase
 
 " Vundle
 filetype off                  " required!
