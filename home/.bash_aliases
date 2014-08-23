@@ -1,6 +1,7 @@
 alias ':P'='homeshick pull dotfiles'
 
 alias b='bzr'
+alias bs='bzr status'
 
 alias s='git status'
 alias d='git diff'
@@ -19,7 +20,7 @@ alias ekill='emacsclient -e "(kill-emacs)"'
 alias xup='xrdb ~/.Xresources'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  alias ls='ls -hF --color'
+  alias ls='ls -F --color'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  alias ls='ls -hFG'
+  alias ls='ls -FG'
 fi
