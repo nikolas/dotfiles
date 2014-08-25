@@ -2,6 +2,7 @@
 
 (global-set-key "\C-cg" 'goto-line)
 (global-set-key "\C-ce" 'edebug-defun)
+(global-set-key "\C-cr" 'revert-buffer)
 
 (defun my-delete-indentation ()
   (interactive)
