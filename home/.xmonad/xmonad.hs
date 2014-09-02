@@ -1,7 +1,12 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
-import XMonad.Util.SpawnOnce
+
+myManageHook = composeAll
+  [ className =? "pidgin" --> doFloat
+  , className =? "Pidgin" --> doFloat
+  , className =? "Gimp" --> doFloat
+  , resource  =? "desktop_window" --> doIgnore ]
 
 main = xmonad $ ewmh defaultConfig{
   borderWidth = 4
@@ -9,6 +14,5 @@ main = xmonad $ ewmh defaultConfig{
   , modMask = mod4Mask
   , normalBorderColor = "black"
   , terminal = "urxvtc"
-  , startupHook = do
-    spawnOnce "xmobar ~/.xmobarrc"
+  , manageHook = myManageHook
   }
