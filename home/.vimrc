@@ -32,12 +32,12 @@ Plugin 'gmarik/Vundle.vim'
 "
 " original repos on GitHub
 Plugin 'kien/ctrlp.vim'
-Plugin 'mustache/vim-mustache-handlebars'
 "Plugin 'kchmck/vim-coffee-script'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'groenewege/vim-less'
-Plugin 'saltstack/salt-vim'
+"Plugin 'saltstack/salt-vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
