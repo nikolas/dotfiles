@@ -10,6 +10,14 @@ if [ -f /etc/bash_completion.d/git-prompt ]; then
   . /etc/bash_completion.d/git-prompt
 fi
 
+if [ -f $HOME/.git-completion.sh ]; then
+  . $HOME/.git-completion.sh
+fi
+
+if [ -f $HOME/.git-prompt.sh ]; then
+  . $HOME/.git-prompt.sh
+fi
+
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
