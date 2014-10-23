@@ -1,7 +1,7 @@
 URxvt*foreground: white
 URxvt*background: black
-URxvt*scrollBar: false
 
+*scrollBar: false
 *font: -*-neep-medium-*-*-*-15-*-*-*-*-*-*-*
 *boldFont: -*-neep-bold-*-*-*-15-*-*-*-*-*-*-*
 
@@ -22,7 +22,7 @@ URxvt*scrollBar: false
 *color14: #fcaf3e
 *color15: #EEEEEC
 
-Xft.antialias:                 true
-Xft.hinting:                   true
-Xft.hintstyle:                 hintfull
-Xft.rgba:                      rgb
+!Xft.antialias:                 true
+!Xft.hinting:                   true
+!Xft.hintstyle:                 hintfull
+!Xft.rgba:                      rgb

@@ -1,7 +1,10 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives
+               '("gnu" . "http://elpa.gnu.org/packages/") t)
+  (add-to-list 'package-archives
+               '("marmalade" . "https://marmalade-repo.org/packages/") t)
   )
 
 (custom-set-variables

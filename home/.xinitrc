@@ -9,4 +9,5 @@ xrdb -merge ~/.Xresources
 urxvtd &
 
 #exec evilwm -term urxvtc
-exec xmonad
+#exec xmonad
+exec icewm
