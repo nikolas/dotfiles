@@ -4,6 +4,8 @@
 (if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (boundp 'fringe-mode) (fringe-mode 0))
 
+(setq gnus-use-full-window nil)
+
 ;; dirtree
 (when (require 'dirtree nil 'noerror)
   )
