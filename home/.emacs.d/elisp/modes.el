@@ -39,8 +39,13 @@
   (window-number-meta-mode)
   )
 
+;; whitespace-cleanup
+(when (require 'whitespace-cleanup-mode nil 'noerror)
+  (global-whitespace-cleanup-mode t))
+
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 4)
+(setq sass-indent-offset 4)
 
 (setq js-indent-level 4)
 
