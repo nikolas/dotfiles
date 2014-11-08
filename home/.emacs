@@ -30,6 +30,9 @@
  ;; If there is more than one, they won't work right.
  )
 
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory
+                                               "backups"))))
+
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 (load-library "style")
 (load-library "keys")
