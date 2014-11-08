@@ -34,6 +34,7 @@
 (load-library "style")
 (load-library "keys")
 (load-library "modes")
+(load-library "random")
 
 (if (not (getenv "TERM_PROGRAM"))
     (load "path"))
