@@ -36,3 +36,5 @@ tramp
 
 # AUCTeX auto folder
 /auto/
+
+.DS_Store
