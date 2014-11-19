@@ -16,5 +16,6 @@ if [ `uname` == "Linux" ]; then
 
     #exec evilwm -term urxvtc
     #exec xmonad
-    exec icewm
+    #exec icewm
+    exec wmaker
 fi
