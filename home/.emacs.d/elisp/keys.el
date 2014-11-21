@@ -2,7 +2,7 @@
 
 (global-set-key "\C-x\C-d" 'dired)
 (global-set-key "\C-xd" 'dired)
-(global-set-key "\C-xp" 'pwd)
+(global-set-key "\C-cp" 'pwd)
 (global-set-key "\C-cg" 'goto-line)
 (global-set-key "\C-ce" 'edebug-defun)
 (global-set-key "\C-cr" 'revert-buffer)
