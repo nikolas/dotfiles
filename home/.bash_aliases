@@ -12,7 +12,7 @@ alias gfu='git fetch upstream'
 alias be='bundle exec'
 alias br='bundle exec rake'
 
-alias e='emacsclient -t'
+alias e='emacs -nw'
 alias ec='emacsclient -c'
 alias eq='emacs -nw -Q'
 alias ekill='emacsclient -e "(kill-emacs)"'
