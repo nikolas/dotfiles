@@ -19,28 +19,28 @@ set sw=4
 set hls
 
 " Vundle
-filetype off                  " required!
+"filetype off                  " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/Vundle.vim'
+"Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 "
 " original repos on GitHub
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
 "Plugin 'kchmck/vim-coffee-script'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'scrooloose/nerdtree'
 "Plugin 'groenewege/vim-less'
 "Plugin 'saltstack/salt-vim'
-Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'mustache/vim-mustache-handlebars'
 
-call vundle#end()            " required
-filetype plugin indent on     " required!
+"call vundle#end()            " required
+"filetype plugin indent on     " required!
 "
 " Brief help
 " :BundleList          - list configured bundles
