@@ -48,6 +48,8 @@
 (setq sass-indent-offset 4)
 
 (setq js-indent-level 4)
+(setq django-indent-width 4)
+(setq nxml-child-indent 4)
 
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
