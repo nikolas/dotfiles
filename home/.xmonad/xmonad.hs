@@ -9,7 +9,7 @@ myManageHook = composeAll
   , resource  =? "desktop_window" --> doIgnore ]
 
 main = xmonad $ ewmh defaultConfig{
-  borderWidth = 4
+  borderWidth = 3
   , focusedBorderColor = "pink"
   , modMask = mod4Mask
   , normalBorderColor = "black"
