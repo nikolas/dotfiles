@@ -65,6 +65,7 @@
 (load-library "keys")
 (load-library "modes")
 (load-library "random")
+(load-library "abbrevs")
 
 (if (not (getenv "TERM_PROGRAM"))
     (load "path"))

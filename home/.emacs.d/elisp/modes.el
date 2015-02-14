@@ -53,3 +53,5 @@
 
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
+
+(setq-default abbrev-mode t)
