@@ -1,8 +1,7 @@
 ;; (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 ;; (gnus-demon-add-handler 'gnus-demon-scan-news 2 t)
 
-(setq gnus-select-method '(nntp "news.gmane.org"))
-(add-to-list 'gnus-secondary-select-methods '(nnml ""))
+(setq gnus-select-method '(nnml ""))
 (setq mail-sources '((pop :server "fencepost.gnu.org"
                           :user "nikolas"
                           :authentication 'apop
@@ -21,3 +20,15 @@
 (setq mail-host-address "gnu.org")
 (setq user-mail-address "nikolas@gnu.org")
 (setq user-full-name "Nik Nyby")
+
+(spam-initialize)
+
+(setq nnmail-split-methods 'nnmail-split-fancy
+      nnmail-split-fancy
+      '(|
+        ;; spam detected by spam-use-regex-headers goes to ‘regex-spam’
+        (: spam-split "regex-spam" 'spam-use-regex-headers)
+        ;; all other spam detected by spam-split goes to spam-split-group
+        (: spam-split)
+        ;; default mailbox
+        "mail"))
