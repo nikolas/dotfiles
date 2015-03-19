@@ -12,8 +12,8 @@ set ruler
 set ai
 set si
 set et
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 
 " search
 set hls
