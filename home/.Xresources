@@ -1,5 +1,6 @@
 URxvt*foreground: white
 URxvt*background: black
+URxvt.perl-ext-common: default,tabbed
 
 *scrollBar: false
 *font: -*-neep-medium-*-*-*-15-*-*-*-*-*-*-*
