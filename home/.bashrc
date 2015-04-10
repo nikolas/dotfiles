@@ -48,3 +48,4 @@ export PATH="$HOME/.bin:$HOME/local/bin:$PATH"
 color_my_prompt
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+[[ -s "/home/nnyby/.gvm/scripts/gvm" ]] && source "/home/nnyby/.gvm/scripts/gvm"
