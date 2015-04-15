@@ -44,8 +44,9 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
 export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.bin:$HOME/local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 color_my_prompt
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-[[ -s "/home/nnyby/.gvm/scripts/gvm" ]] && source "/home/nnyby/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
