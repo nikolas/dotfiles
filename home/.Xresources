@@ -3,8 +3,8 @@ URxvt*background: black
 URxvt.perl-ext-common: default,tabbed
 
 *scrollBar: false
-*font: -*-neep-medium-*-*-*-15-*-*-*-*-*-*-*
-*boldFont: -*-neep-bold-*-*-*-15-*-*-*-*-*-*-*
+*font: -*-neep-medium-*-*-*-24-*-*-*-*-*-*-*
+*boldFont: -*-neep-bold-*-*-*-24-*-*-*-*-*-*-*
 
 *color0:  #2E3436
 *color1:  #a40000
