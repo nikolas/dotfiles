@@ -1,19 +1,21 @@
 set nocompatible
+filetype plugin indent on
 
 " keys
 map <Space> :noh<cr>
 
 " appearance
-syntax on
+syn on se title
 color ron
 set ruler
 
 " formatting
 set ai
 set si
-set et
-set ts=2
-set sw=2
+set noet
+set ts=8
+set sw=8
+set softtabstop=8
 
 " search
 set hls
