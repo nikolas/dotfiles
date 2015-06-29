@@ -9,3 +9,7 @@
   ; TODO: only define this when neep is installed
   (set-face-font 'default "-jmk-neep-bold-*-*-*-13-120-*-*-*-*-*-*")
   (set-face-attribute 'default nil :height 120))
+
+(custom-set-variables
+ '(custom-enabled-themes (quote (tsdh-dark)))
+ )
