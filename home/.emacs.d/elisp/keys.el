@@ -25,3 +25,6 @@
 ;; (when (require 'ember-rails nil 'noerror)
 ;;   (global-set-key "\C-c,e" 'ember-rails-toggle-file)
 ;;   )
+
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
