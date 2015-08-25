@@ -2,7 +2,7 @@
   (require 'package)
   (package-initialize)
   (add-to-list 'package-archives
-               '("gnu" . "http://elpa.gnu.org/packages/") t)
+               '("gnu" . "https://elpa.gnu.org/packages/") t)
   (add-to-list 'package-archives
                '("marmalade" . "https://marmalade-repo.org/packages/") t)
   (add-to-list 'package-archives
