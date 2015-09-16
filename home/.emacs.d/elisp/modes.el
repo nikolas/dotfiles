@@ -51,6 +51,8 @@
 (setq django-indent-width 4)
 (setq nxml-child-indent 4)
 
+(setq c-basic-offset 4)
+
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
 
