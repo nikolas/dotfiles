@@ -51,7 +51,9 @@
 (setq django-indent-width 4)
 (setq nxml-child-indent 4)
 
+;; C
 (setq c-basic-offset 4)
+(setq indent-tabs-mode nil)
 
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
