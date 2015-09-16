@@ -64,11 +64,11 @@
                                                "backups"))))
 
 (add-to-list 'load-path "~/.emacs.d/elisp/")
-(load-library "style")
 (load-library "keys")
 (load-library "modes")
 (load-library "random")
 (load-library "abbrevs")
+(load-library "style")
 
 (if (not (getenv "TERM_PROGRAM"))
     (load "path"))
