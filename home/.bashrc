@@ -48,9 +48,9 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 if [ -x "$HOME/.pyenv/bin/pyenv" ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
+    export PATH="$HOME/.pyenv/bin:$PATH"
     eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
 fi
 
 ### Added by the Heroku Toolbelt
