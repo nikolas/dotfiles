@@ -38,3 +38,7 @@ tramp
 /auto/
 
 .DS_Store
+
+# virtualenv
+ve/
+venv/
