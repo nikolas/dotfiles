@@ -55,6 +55,8 @@
 (setq c-basic-offset 4)
 (setq indent-tabs-mode nil)
 
+(setq mustache-basic-offset 4)
+
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
 
