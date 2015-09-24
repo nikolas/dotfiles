@@ -60,6 +60,10 @@
 (when (require 'icicles nil 'noerror)
   (icy-mode 1))
 
+;; haskell-mode
+(when (require 'haskell-mode nil 'noerror)
+  (add-hook 'haskell-mode-hook 'haskell-indentation-mode))
+
 (setq-default abbrev-mode t)
 
 ; :3
