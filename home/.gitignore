@@ -42,3 +42,5 @@ tramp
 # virtualenv
 ve/
 venv/
+
+npm-debug.log
