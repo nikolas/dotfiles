@@ -66,6 +66,9 @@
 
 (setq-default abbrev-mode t)
 
+(setq web-mode-style-padding 0)
+(setq web-mode-script-padding 0)
+
 ; :3
 (defun c-lineup-arglist-tabs-only (ignored)
   "Line up argument lists by tabs, not spaces"
