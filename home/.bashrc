@@ -53,5 +53,10 @@ if [ -x "$HOME/.pyenv/bin/pyenv" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+if [ -x "$HOME/.rbenv/bin/rbenv" ]; then
+    eval "$(rbenv init -)"
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
