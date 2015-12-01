@@ -1,7 +1,8 @@
 import XMonad
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.NoBorders
-import XMonad.Util.EZConfig
+--import XMonad.Layout.Accordion
+--import XMonad.Util.EZConfig
 
 myManageHook = composeAll
     [ className =? "pidgin" --> doFloat
@@ -31,8 +32,5 @@ main = xmonad $ ewmh $ defaultConfig {
   , terminal = "urxvtc"
   , manageHook = myManageHook
   , layoutHook = myLayout
-  } `additionalKeys`
-       [
-         -- hide/show window borders thanks to http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Actions-NoBorders.html
-         -- ((mod4Mask,  xK_g ),   withFocused toggleBorder)
-       ]
+  } --`additionalKeys`
+       --[ ((mod4Mask,  xK_g ),   withFocused toggleBorder) ]
