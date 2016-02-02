@@ -101,4 +101,6 @@
                                 (c-set-style "linux-tabs-only")))))
 
 (when (require 'web-mode nil 'noerror)
-  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  (setq web-mode-engines-alist
+        '(("django"    . "\\.html\\'"))))
