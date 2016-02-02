@@ -99,3 +99,6 @@
                 (setq indent-tabs-mode t)
                 (setq show-trailing-whitespace t)
                                 (c-set-style "linux-tabs-only")))))
+
+(when (require 'web-mode nil 'noerror)
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))

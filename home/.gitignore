@@ -44,3 +44,4 @@ ve/
 venv/
 
 npm-debug.log
+*.pyc
