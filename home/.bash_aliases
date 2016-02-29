@@ -9,6 +9,8 @@ alias l='git log'
 alias gfo='git fetch origin'
 alias gfu='git fetch upstream'
 alias gcm='git checkout master'
+# git branch-sort
+alias gbs='git for-each-ref --sort=committerdate refs/heads/'
 
 alias be='bundle exec'
 alias br='bundle exec rake'
