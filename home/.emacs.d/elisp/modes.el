@@ -114,3 +114,5 @@
         (let ((web-mode-enable-part-face nil))
           ad-do-it)
       ad-do-it)))
+
+(add-to-list 'auto-mode-alist '("\\.es6$" . js-mode))
