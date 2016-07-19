@@ -49,6 +49,7 @@ export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin
 export PATH="$HOME/.bin:$HOME/local/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME:$HOME/local/go/bin"
 
 color_my_prompt
 
