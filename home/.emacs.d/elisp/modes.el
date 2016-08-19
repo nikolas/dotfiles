@@ -104,7 +104,10 @@
 (when (require 'web-mode nil 'noerror)
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
   (setq web-mode-engines-alist
-        '(("django"    . "\\.html\\'"))))
+        '(("django" . "/d/.*\\.html\\'")
+          ("go" . "/src/digitaltibet/.*\\.html\\'"))
+        )
+  )
 
 
 (when (require 'web-mode nil 'noerror)
