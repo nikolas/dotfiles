@@ -12,10 +12,11 @@ if [ `uname` == "Linux" ]; then
     xsetroot -cursor_name left_ptr
     xrdb -merge ~/.Xresources
 
+    numlockx
     urxvtd &
 
-    #exec evilwm -term urxvtc
+    #exec evilwm -term urxvtc -fn neep
     #exec xmonad
-    #exec icewm
-    exec wmaker
+    exec icewm
+    #exec wmaker
 fi
