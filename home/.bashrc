@@ -43,15 +43,14 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
 
-export GOROOT="$HOME/go"
+export GOROOT="$HOME/local/go"
 export GOPATH="$HOME/gocode"
 
 export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.bin:$HOME/local/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/local/go/bin:$PATH"
-export PATH="$PATH:$GOROOT/bin"
+export PATH="$GOROOT/bin:$PATH"
 
 color_my_prompt
 
