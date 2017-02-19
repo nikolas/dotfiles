@@ -15,8 +15,8 @@ if [ `uname` == "Linux" ]; then
     numlockx
     urxvtd &
 
-    #exec evilwm -term urxvtc -fn neep
-    #exec xmonad
-    exec icewm
+    #exec evilwm -term urxvtc
+    exec xmonad
+    #exec icewm
     #exec wmaker
 fi
