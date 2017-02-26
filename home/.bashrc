@@ -48,6 +48,7 @@ export GOPATH="$HOME/gocode"
 
 export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.bin:$HOME/local/bin:$PATH"
+export PATH="/opt/ghc/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$GOROOT/bin:$PATH"
