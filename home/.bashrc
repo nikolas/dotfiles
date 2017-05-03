@@ -43,7 +43,7 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
 
-export GOROOT="$HOME/local/go"
+export GOROOT="$HOME/go"
 export GOPATH="$HOME/gocode"
 
 export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
@@ -52,6 +52,10 @@ export PATH="/opt/ghc/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$GOROOT/bin:$PATH"
+export PATH="$HOME/Android/Sdk/tools:$PATH"
+export PATH="$HOME/Android/Sdk/tools/bin:$PATH"
+
+export ANDROID_HOME="$HOME/Android/Sdk"
 
 color_my_prompt
 
