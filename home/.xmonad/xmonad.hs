@@ -8,6 +8,8 @@ myManageHook = composeAll
     [ className =? "pidgin" --> doFloat
     , className =? "Pidgin" --> doFloat
     , className =? "Gimp" --> doFloat
+    , className =? "ardour" --> doFloat
+    , className =? "Ardour" --> doFloat
     , resource  =? "desktop_window" --> doIgnore ]
 
 myLayout = smartBorders (tiled ||| Mirror tiled ||| Full)
