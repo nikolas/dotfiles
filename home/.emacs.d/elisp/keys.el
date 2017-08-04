@@ -1,16 +1,16 @@
 ;; key bindings
 
-(global-set-key "\C-x\C-d" 'dired)
-(global-set-key "\C-xd" 'dired)
-(global-set-key "\C-cp" 'pwd)
-(global-set-key "\C-cg" 'goto-line)
-(global-set-key "\C-ce" 'edebug-defun)
-(global-set-key "\C-cr" 'revert-buffer)
+(global-set-key (kbd "C-x C-d") 'dired)
+(global-set-key (kbd "C-x d") 'dired)
+(global-set-key (kbd "C-c p") 'pwd)
+(global-set-key (kbd "C-c g") 'goto-line)
+(global-set-key (kbd "C-c e") 'edebug-defun)
+(global-set-key (kbd "C-c r") 'revert-buffer)
 
 (defun my-delete-indentation ()
   (interactive)
   (delete-indentation t))
-(global-set-key "\M-j" 'my-delete-indentation)
+(global-set-key (kbd "M-j") 'my-delete-indentation)
 
 ;; (defun my-maximize-window ()
 ;;   (interactive)
