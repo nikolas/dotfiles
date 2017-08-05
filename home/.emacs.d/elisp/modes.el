@@ -29,10 +29,6 @@
 (if (file-exists-p "~/org")
   (setq org-agenda-files (directory-files "~/org" t "\.org$")))
 
-;; projectile
-(when (require 'projectile nil 'noerror)
-  (projectile-global-mode))
-
 ;; window-number
 (when (require 'window-number nil 'noerror)
   (window-number-mode 1)
