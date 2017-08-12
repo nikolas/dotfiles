@@ -12,8 +12,11 @@ if [ `uname` == "Linux" ]; then
     xsetroot -cursor_name left_ptr
     xrdb -merge ~/.Xresources
     keyboard.sh
+    touchpad.sh
 
-    numlockx
+    if hash numlockx; then
+        numlockx
+    fi
     urxvtd &
 
     exec evilwm -term urxvtc
