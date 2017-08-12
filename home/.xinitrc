@@ -11,12 +11,13 @@ if [ `uname` == "Linux" ]; then
     xsetroot -solid orange
     xsetroot -cursor_name left_ptr
     xrdb -merge ~/.Xresources
+    keyboard.sh
 
     numlockx
     urxvtd &
 
-    #exec evilwm -term urxvtc
-    exec xmonad
+    exec evilwm -term urxvtc
+    #exec xmonad
     #exec icewm
     #exec wmaker
 fi
