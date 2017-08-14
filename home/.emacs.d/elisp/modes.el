@@ -86,16 +86,16 @@
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
-(add-hook 'c-mode-hook
-          (lambda ()
-            (let ((filename (buffer-file-name)))
-              ;; Enable kernel mode for the appropriate files
-              (when (and filename
-                         (string-match (expand-file-name "~/src/kernels")
-                                       filename))
-                (setq indent-tabs-mode t)
-                (setq show-trailing-whitespace t)
-                                (c-set-style "linux-tabs-only")))))
+;; (add-hook 'c-mode-hook
+;;           (lambda ()
+;;             (let ((filename (buffer-file-name)))
+;;               ;; Enable kernel mode for the appropriate files
+;;               (when (and filename
+;;                          (string-match (expand-file-name "~/src/kernels")
+;;                                        filename))
+;;                 (setq indent-tabs-mode t)
+;;                 (setq show-trailing-whitespace t)
+;;                                 (c-set-style "linux-tabs-only")))))
 
 (when (require 'web-mode nil 'noerror)
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
