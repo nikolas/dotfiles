@@ -8,7 +8,12 @@
 if [ `uname` == "Linux" ]; then
     pkill urxvtd
 
-    xsetroot -solid orange
+    if [ -f "~/pics/clone.png" ]; then
+        feh --bg-tile pics/clone.png
+    else
+        xsetroot -solid orange
+    fi
+
     xsetroot -cursor_name left_ptr
     xrdb -merge ~/.Xresources
     keyboard.sh
@@ -20,7 +25,10 @@ if [ `uname` == "Linux" ]; then
     urxvtd &
 
     #exec evilwm -term urxvtc
-    exec xmonad
-    #exec icewm
+    if [ `hostname` == "maldive" ]; then
+        exec icewm
+    else
+        exec xmonad
+    fi
     #exec wmaker
 fi
