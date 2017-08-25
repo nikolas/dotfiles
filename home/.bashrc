@@ -64,7 +64,6 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 if [ -x "$HOME/.pyenv/bin/pyenv" ]; then
     export PATH="$HOME/.pyenv/bin:$PATH"
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
 fi
 
 if [ -x "$HOME/.rbenv/bin/rbenv" ]; then
