@@ -1,7 +1,7 @@
 import XMonad
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.NoBorders
-import XMonad.Layout.Circle
+import XMonad.Layout.DecorationMadness
 --import XMonad.Layout.Accordion
 --import XMonad.Util.EZConfig
 
@@ -13,7 +13,7 @@ myManageHook = composeAll
     , className =? "Ardour" --> doFloat
     , resource  =? "desktop_window" --> doIgnore ]
 
-myLayout = smartBorders (Circle ||| tiled ||| Mirror tiled ||| Full)
+myLayout = smartBorders (circleSimpleTabbed ||| tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled = Tall nmaster delta ratio
