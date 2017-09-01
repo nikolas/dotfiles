@@ -107,12 +107,21 @@
   )
 
 
-(when (require 'web-mode nil 'noerror)
-  (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
-  (defadvice web-mode-highlight-part (around tweak-jsx activate)
-    (if (equal web-mode-content-type "jsx")
-        (let ((web-mode-enable-part-face nil))
-          ad-do-it)
-      ad-do-it)))
+;; (when (require 'web-mode nil 'noerror)
+;;   (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+;;   (defadvice web-mode-highlight-part (around tweak-jsx activate)
+;;     (if (equal web-mode-content-type "jsx")
+;;         (let ((web-mode-enable-part-face nil))
+;;           ad-do-it)
+;;       ad-do-it)))
+
+;; (when (require 'web-mode nil 'noerror)
+;;   (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
+;;   (defadvice web-mode-highlight-part (around tweak-jsx activate)
+;;     (if (equal web-mode-content-type "js")
+;;         (let ((web-mode-enable-part-face nil))
+;;           ad-do-it)
+;;       ad-do-it)))
+(add-to-list 'auto-mode-alist '("src\\/.*\\.js\\'" . rjsx-mode))
 
 (add-to-list 'auto-mode-alist '("\\.es6$" . js-mode))
