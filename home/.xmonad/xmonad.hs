@@ -15,6 +15,7 @@ myManageHook = composeAll
     , className =? "Gimp" --> doFloat
     , className =? "ardour" --> doFloat
     , className =? "Ardour" --> doFloat
+    , className =? "Clock" --> doFloat
     , className =? "XEyes" --> doFloat
     , resource  =? "desktop_window" --> doIgnore ]
 
