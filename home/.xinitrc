@@ -8,8 +8,8 @@
 if [ `uname` == "Linux" ]; then
     pkill urxvtd
 
-    if [ -f "$HOME/pics/clone.png" ]; then
-        feh --bg-tile pics/clone.png
+    if [ -f "$HOME/Pictures/clone.png" ]; then
+        feh --bg-tile Pictures/clone.png
     else
         xsetroot -solid orange
     fi
