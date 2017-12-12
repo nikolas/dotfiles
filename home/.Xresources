@@ -5,6 +5,10 @@ URxvt.perl-ext-common: default,tabbed
 URxvt.depth: 32
 URxvt.background: rgba:0000/0000/0200/c800
 
+! fake transparency
+urxvt*transparent: true
+urxvt*shading: 30
+
 *scrollBar: false
 *font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
 *boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
