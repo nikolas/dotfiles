@@ -14,6 +14,10 @@ if [ `uname` == "Linux" ]; then
         xsetroot -solid orange
     fi
 
+    if [ -f "$HOME/Pictures/Snapshot_024.png" ]; then
+        feh --bg-tile Pictures/Snapshot_024.png
+    fi
+
     xsetroot -cursor_name left_ptr
     xrdb -merge ~/.Xresources
     keyboard.sh
