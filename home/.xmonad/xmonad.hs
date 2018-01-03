@@ -12,6 +12,7 @@ import XMonad.Util.EZConfig
 myManageHook = composeAll
     [ className =? "pidgin" --> doFloat
     , className =? "Pidgin" --> doFloat
+    , className =? "gimp" --> doFloat
     , className =? "Gimp" --> doFloat
     , className =? "ardour" --> doFloat
     , className =? "Ardour" --> doFloat
