@@ -13,3 +13,5 @@
 ;; (custom-set-variables
 ;;  '(custom-enabled-themes (quote (tsdh-dark)))
 ;;  )
+
+(load-theme 'tango-dark t)
