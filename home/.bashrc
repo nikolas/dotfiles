@@ -54,6 +54,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 #export PATH="$GOROOT/bin:$PATH"
 export PATH="$HOME/Android/Sdk/tools:$PATH"
 export PATH="$HOME/Android/Sdk/tools/bin:$PATH"
+export PATH="$PATH:$HOME/local/go/bin"
 
 export ANDROID_HOME="$HOME/Android/Sdk"
 
