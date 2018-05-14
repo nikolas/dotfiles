@@ -14,4 +14,4 @@
 ;;  '(custom-enabled-themes (quote (tsdh-dark)))
 ;;  )
 
-(load-theme 'tango-dark t)
+(load-theme 'wombat t)
