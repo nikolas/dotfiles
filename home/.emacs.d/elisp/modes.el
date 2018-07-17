@@ -100,6 +100,7 @@
 
 (when (require 'web-mode nil 'noerror)
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
   (setq web-mode-engines-alist
         '(("django" . "/d/.*\\.html\\'")
           ("go" . "/src/digitaltibet/.*\\.html\\'"))
@@ -122,9 +123,9 @@
 ;;         (let ((web-mode-enable-part-face nil))
 ;;           ad-do-it)
 ;;       ad-do-it)))
-(add-to-list 'auto-mode-alist '("src\\/.*\\.js\\'" . rjsx-mode))
-(with-eval-after-load 'rjsx-mode
-  (define-key rjsx-mode-map "<" nil)
-  (define-key rjsx-mode-map (kbd "C-d") nil))
+;; (add-to-list 'auto-mode-alist '("src\\/.*\\.js\\'" . rjsx-mode))
+;; (with-eval-after-load 'rjsx-mode
+;;   (define-key rjsx-mode-map "<" nil)
+;;   (define-key rjsx-mode-map (kbd "C-d") nil))
 
 (add-to-list 'auto-mode-alist '("\\.es6$" . js-mode))
