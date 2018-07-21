@@ -45,3 +45,5 @@ venv/
 
 npm-debug.log
 *.pyc
+
+.dir-locals.el
