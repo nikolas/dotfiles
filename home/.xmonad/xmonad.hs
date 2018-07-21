@@ -46,6 +46,7 @@ main = xmonad $ ewmh $ defaultConfig {
        [
          ((mod4Mask, xK_g), withFocused toggleBorder),
          ((mod4Mask, xK_F1), manPrompt def),
+         ((mod4Mask, xK_F7), toggleMute    >> return ()),
          ((mod4Mask, xK_F8 ), lowerVolume 3 >> return ()),
          ((mod4Mask, xK_F9 ), raiseVolume 3 >> return ()),
          ((mod4Mask, xK_F10), toggleMute    >> return ())
