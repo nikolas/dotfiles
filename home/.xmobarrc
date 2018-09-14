@@ -1,11 +1,11 @@
 Config {
-  font = "-*-neep-medium-*-*-*-11-*-*-*-*-*-*-*"
+  font = "-*-neep-medium-*-*-*-13-*-*-*-*-*-*-*"
   , additionalFonts = []
-  , borderColor = "black"
+  --, borderColor = "black"
   , border = TopB
   , bgColor = "black"
   , fgColor = "grey"
-  , alpha = 255
+  , alpha = 100
   , position = Bottom
   , textOffset = -1
   , iconOffset = -1
@@ -32,6 +32,6 @@ Config {
                ]
   , sepChar = "%"
   , alignSep = "}{"
-  , template = "%cpu% | %memory% * %swap% | %wlp12s0% }\
-               \{ <fc=#ee9a00>%date%</fc>| %KLGA% | %uname%"
+  , template = "%cpu% %memory% * %swap% %wlp12s0% }\
+               \{ <fc=#ee9a00>%date%</fc> %KLGA% %uname%"
   }

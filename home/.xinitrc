@@ -18,6 +18,10 @@ if [ `uname` == "Linux" ]; then
         feh --bg-tile Pictures/Snapshot_024.png
     fi
 
+    if [ -f "$HOME/Pictures/classic-mac-os-tile-wallpapers-4.png" ]; then
+        feh --bg-tile Pictures/classic-mac-os-tile-wallpapers-4.png
+    fi
+
     xsetroot -cursor_name left_ptr
     xrdb -merge ~/.Xresources
     keyboard.sh
