@@ -27,7 +27,6 @@
    (quote
     (php-mode salt-mode nginx-mode rjsx-mode haskell-mode web-mode ag whitespace-cleanup-mode window-number git-gutter tuareg)))
  '(standard-indent 4)
- '(tool-bar-mode nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
