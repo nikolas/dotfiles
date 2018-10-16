@@ -10,6 +10,10 @@ if [ `uname` == "Linux" ]; then
 
     if [ -f "$HOME/Pictures/clone.png" ]; then
         feh --bg-tile Pictures/clone.png
+    fi
+
+    if [ -f "/usr/share/icewm/themes/default/default.png" ]; then
+        feh --bg-tile /usr/share/icewm/themes/default/default.png
     else
         xsetroot -solid orange
     fi
@@ -33,10 +37,10 @@ if [ `uname` == "Linux" ]; then
     urxvtd &
 
     #exec evilwm -term urxvtc
-    if [ `hostname` == "maldive" ]; then
-        exec icewm
-    else
+    #if [ `hostname` == "maldive" ]; then
+        #exec icewm
+    #else
         exec xmonad
-    fi
+    #fi
     #exec wmaker
 fi
