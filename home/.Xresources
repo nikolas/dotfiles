@@ -7,7 +7,7 @@ URxvt.background: rgba:0000/0000/0200/c800
 
 ! fake transparency
 urxvt*transparent: true
-urxvt*shading: 30
+urxvt*shading: 15
 
 *scrollBar: false
 !*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
