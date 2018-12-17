@@ -2,6 +2,11 @@ URxvt*foreground: white
 !URxvt*background: black
 URxvt.perl-ext-common: default,tabbed
 
+XTerm*foreground: white
+XTerm*background: black
+XTerm*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
+XTerm*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
+
 URxvt.depth: 32
 URxvt.background: rgba:0000/0000/0200/c800
 
@@ -12,8 +17,8 @@ urxvt*shading: 15
 *scrollBar: false
 !*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
 !*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
-*font: -*-neep-medium-*-*-*-15-*-*-*-*-*-*-*
-*boldFont: -*-neep-bold-*-*-*-15-*-*-*-*-*-*-*
+*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
+*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
 
 *color0:  #2E3436
 *color1:  #a40000
