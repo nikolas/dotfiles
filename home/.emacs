@@ -25,7 +25,7 @@
  '(git-gutter:handled-backends (quote (git bzr)))
  '(package-selected-packages
    (quote
-    (php-mode salt-mode nginx-mode rjsx-mode haskell-mode web-mode ag whitespace-cleanup-mode window-number git-gutter tuareg)))
+    (rust-mode php-mode salt-mode nginx-mode rjsx-mode haskell-mode web-mode ag whitespace-cleanup-mode window-number git-gutter tuareg)))
  '(standard-indent 4)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
@@ -79,7 +79,7 @@
 (setq scss-compile-at-save nil)
 
 ;; No tabs...
-(setq-default indent-tabs-mode nil)
+;(setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq sgml-basic-offset 4)
 (setq handlebars-basic-offset 4)

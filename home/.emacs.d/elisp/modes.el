@@ -87,6 +87,10 @@
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode t)
+
 ;; (add-hook 'c-mode-hook
 ;;           (lambda ()
 ;;             (let ((filename (buffer-file-name)))
