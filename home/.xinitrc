@@ -8,6 +8,10 @@
 if [ `uname` == "Linux" ]; then
     pkill urxvtd
 
+    if [ -f "$HOME/Pictures/waves.jpg" ]; then
+        feh --bg-tile Pictures/waves.jpg
+    fi
+
     if [ -f "$HOME/Pictures/clone.png" ]; then
         feh --bg-tile Pictures/clone.png
     fi
