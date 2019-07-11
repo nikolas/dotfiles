@@ -4,7 +4,7 @@
   (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
 
 (define-abbrev global-abbrev-table "pdb"
-  "from ipdb import set_trace; set_trace()")
+  "from pdb import set_trace; set_trace()")
 
 (defun wrap-html-tag (tagName)
   "Add a tag to beginning and ending of current word or text selection."
