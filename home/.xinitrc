@@ -9,15 +9,15 @@ if [ `uname` == "Linux" ]; then
     pkill urxvtd
 
     if [ -f "$HOME/Pictures/o.png" ]; then
-        feh --bg-tile Pictures/o.png
+        feh --bg-tile $HOME/Pictures/o.png
     fi
 
     if [ -f "$HOME/Pictures/waves.jpg" ]; then
-        feh --bg-tile Pictures/waves.jpg
+        feh --bg-tile $HOME/Pictures/waves.jpg
     fi
 
     if [ -f "$HOME/Pictures/clone.png" ]; then
-        feh --bg-tile Pictures/clone.png
+        feh --bg-tile $HOME/Pictures/clone.png
     fi
 
     if [ -f "/usr/share/icewm/themes/default/default.png" ]; then
@@ -27,15 +27,15 @@ if [ `uname` == "Linux" ]; then
     fi
 
     if [ -f "$HOME/Pictures/Snapshot_024.png" ]; then
-        feh --bg-tile Pictures/Snapshot_024.png
+        feh --bg-tile $HOME/Pictures/Snapshot_024.png
     fi
 
     if [ -f "$HOME/Pictures/classic-mac-os-tile-wallpapers-4.png" ]; then
-        feh --bg-tile Pictures/classic-mac-os-tile-wallpapers-4.png
+        feh --bg-tile $HOME/Pictures/classic-mac-os-tile-wallpapers-4.png
     fi
 
     if [ -f "$HOME/Pictures/coolcats.png" ]; then
-        feh --bg-tile Pictures/coolcats.png
+        feh --bg-tile $HOME/Pictures/coolcats.png
     fi
 
     xsetroot -cursor_name left_ptr
