@@ -8,10 +8,6 @@
 if [ `uname` == "Linux" ]; then
     pkill urxvtd
 
-    if [ -f "$HOME/Pictures/o.png" ]; then
-        feh --bg-tile $HOME/Pictures/o.png
-    fi
-
     if [ -f "$HOME/Pictures/waves.jpg" ]; then
         feh --bg-tile $HOME/Pictures/waves.jpg
     fi
@@ -36,6 +32,10 @@ if [ `uname` == "Linux" ]; then
 
     if [ -f "$HOME/Pictures/coolcats.png" ]; then
         feh --bg-tile $HOME/Pictures/coolcats.png
+    fi
+
+    if [ -f "$HOME/Pictures/o.png" ]; then
+        feh --bg-tile $HOME/Pictures/o.png
     fi
 
     xsetroot -cursor_name left_ptr
