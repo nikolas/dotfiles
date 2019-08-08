@@ -1,6 +1,6 @@
 import XMonad
 import XMonad.Actions.NoBorders
-import XMonad.Actions.Volume
+--import XMonad.Actions.Volume
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.NoBorders
 import XMonad.Layout.DecorationMadness
@@ -35,7 +35,7 @@ myLayout = smartBorders (circleSimpleTabbed ||| tiled ||| Full)
     delta = 3 / 100
 
 main = xmonad $ ewmh $ defaultConfig {
-  borderWidth = 2
+  borderWidth = 0
   , focusedBorderColor = "pink"
   , modMask = mod4Mask
   , normalBorderColor = "black"
@@ -44,10 +44,10 @@ main = xmonad $ ewmh $ defaultConfig {
   , layoutHook = myLayout
   } `additionalKeys`
        [
-         ((mod4Mask, xK_g), withFocused toggleBorder),
-         ((mod4Mask, xK_F1), manPrompt def),
-         ((mod4Mask, xK_F7), toggleMute    >> return ()),
-         ((mod4Mask, xK_F8 ), lowerVolume 3 >> return ()),
-         ((mod4Mask, xK_F9 ), raiseVolume 3 >> return ()),
-         ((mod4Mask, xK_F10), toggleMute    >> return ())
+         ((mod4Mask, xK_g), withFocused toggleBorder)
+         --((mod4Mask, xK_F1), manPrompt def)
+         --((mod4Mask, xK_F7), toggleMute    >> return ()),
+         --((mod4Mask, xK_F8 ), lowerVolume 3 >> return ()),
+         --((mod4Mask, xK_F9 ), raiseVolume 3 >> return ()),
+         --((mod4Mask, xK_F10), toggleMute    >> return ())
        ]
