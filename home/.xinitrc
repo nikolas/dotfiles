@@ -19,7 +19,7 @@ if [ `uname` == "Linux" ]; then
     if [ -f "/usr/share/icewm/themes/default/default.png" ]; then
         feh --bg-tile /usr/share/icewm/themes/default/default.png
     else
-        xsetroot -solid orange
+        xsetroot -solid black
     fi
 
     if [ -f "$HOME/Pictures/Snapshot_024.png" ]; then
