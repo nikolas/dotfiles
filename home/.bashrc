@@ -47,7 +47,7 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 export GOPATH="$HOME/gocode"
 
 export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
-export PATH="$HOME/.bin:$HOME/local/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.local/bin:$HOME/local/bin:$PATH"
 export PATH="/opt/ghc/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -74,6 +74,6 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-if [ -x "$(which fortune)" ]; then
-    fortune
-fi
+#if [ -x "$(which fortune)" ]; then
+#    fortune
+#fi
