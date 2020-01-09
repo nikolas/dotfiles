@@ -79,7 +79,7 @@
 (setq scss-compile-at-save nil)
 
 ;; No tabs...
-;(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq sgml-basic-offset 4)
 (setq handlebars-basic-offset 4)
