@@ -45,6 +45,7 @@
 (setq sass-indent-offset 4)
 
 (setq js-indent-level 4)
+(setq sgml-basic-offset 4)
 (setq js-switch-indent-offset 4)
 (setq django-indent-width 4)
 (setq nxml-child-indent 4)
