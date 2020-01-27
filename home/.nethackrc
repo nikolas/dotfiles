@@ -1,3 +1,4 @@
+OPTIONS=name:LennartsWife2020
 OPTIONS=pickup_types:$
 OPTIONS=showexp,showscore,time,color
 OPTIONS=autodig,fruit:Wendy's chicken sandwich,boulder:0

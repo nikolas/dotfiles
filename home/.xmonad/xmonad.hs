@@ -4,6 +4,8 @@ import XMonad.Actions.NoBorders
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.NoBorders
 import XMonad.Layout.DecorationMadness
+--import XMonad.Layout.Gaps
+--import XMonad.Layout.Spacing
 import XMonad.Prompt
 import XMonad.Prompt.Man
 --import XMonad.Layout.Accordion
