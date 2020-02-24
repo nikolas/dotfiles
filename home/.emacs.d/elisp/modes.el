@@ -129,8 +129,10 @@
 ;;           ad-do-it)
 ;;       ad-do-it)))
 ;; (add-to-list 'auto-mode-alist '("src\\/.*\\.js\\'" . rjsx-mode))
-;; (with-eval-after-load 'rjsx-mode
-;;   (define-key rjsx-mode-map "<" nil)
-;;   (define-key rjsx-mode-map (kbd "C-d") nil))
+
+(with-eval-after-load 'rjsx-mode
+  (define-key rjsx-mode-map "<" nil)
+  (define-key rjsx-mode-map (kbd "C-d") nil)
+  (define-key rjsx-mode-map ">" nil))
 
 (add-to-list 'auto-mode-alist '("\\.es6$" . js-mode))
