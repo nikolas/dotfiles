@@ -37,7 +37,7 @@ myLayout = smartBorders (circleSimpleTabbed ||| tiled ||| Full)
     delta = 3 / 100
 
 main = xmonad $ ewmh $ defaultConfig {
-  borderWidth = 0
+  borderWidth = 1
   , focusedBorderColor = "pink"
   , modMask = mod4Mask
   , normalBorderColor = "black"
