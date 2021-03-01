@@ -34,6 +34,10 @@ if [ `uname` == "Linux" ]; then
         feh --bg-tile $HOME/Pictures/coolcats.png
     fi
 
+    if [ -f "$HOME/Pictures/niceworld.png" ]; then
+        feh --bg-tile $HOME/Pictures/niceworld.png
+    fi
+
     if [ -f "$HOME/Pictures/o.png" ]; then
         feh --bg-tile $HOME/Pictures/o.png
     fi
