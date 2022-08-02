@@ -13,8 +13,6 @@
 
 ;; git-gutter
 (when (require 'git-gutter nil 'noerror)
-  (custom-set-variables
-   '(git-gutter:handled-backends '(git bzr)))
   ;; If you enable global minor mode
   (global-git-gutter-mode t)
   ;; Jump to next/previous hunk
