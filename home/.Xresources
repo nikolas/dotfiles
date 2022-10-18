@@ -17,8 +17,8 @@ urxvt*shading: 15
 *scrollBar: false
 !*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
 !*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
-*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
-*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
+!*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
+!*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
 
 *color0:  #2E3436
 *color1:  #a40000
