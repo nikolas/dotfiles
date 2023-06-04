@@ -1,7 +1,8 @@
 OPTIONS=name:Lennart
 OPTIONS=pickup_types:$
 OPTIONS=showexp,showscore,time,color
-OPTIONS=autodig,fruit:Wendy's chicken sandwich,boulder:0
+OPTIONS=hitpointbar
+OPTIONS=autodig,boulder:0
 OPTIONS=!cmdassist
 OPTIONS=disclose:+aigcv
 OPTIONS=msg_window:combination
@@ -10,43 +11,15 @@ OPTIONS=number_pad:0
 #OPTIONS=windowtype:X11
 
 # not sun-friendly :P
-OPTIONS=DECgraphics,hilite_pet,lit_corridor
+OPTIONS=DECgraphics,lit_corridor
+OPTIONS=hilite_pet,hilite_pile
 
-# The following are options not in vanilla NetHack:
-#
-#OPTIONS=use_darkgray
-#
-# Not in vanilla
-#OPTIONS=showborn,showbuc
-#
-#OPTIONS=hp_monitor
-## Name and rank background correspond to statuscolor HP colors.
-#OPTIONS=hitpointbar
-#
-## Colored status lines. See http://bilious.alt.org/?142
-#OPTIONS=statuscolors
-## HP
-#STATUSCOLOR=hp%100=green,hp%66=yellow,hp%50=orange
-#STATUSCOLOR=hp%33=red&bold,hp%15:red&inverse,hp%0:red&inverse&blink
-## Pw
-#STATUSCOLOR=pw%100=green,pw%66=yellow,pw%50:orange,pw%33=red&bold
-## Carry
-#STATUSCOLOR=burdened:yellow,stressed:orange,strained:red&bold
-#STATUSCOLOR=overtaxed:red&inverse,overloaded:red&inverse&blink
-## Hunger
-#STATUSCOLOR=satiated:yellow,hungry:orange,weak:red&bold
-#STATUSCOLOR=fainting:red&inverse,fainted:red&inverse&blink
-## Mental
-#STATUSCOLOR=hallu:yellow,conf:orange,stun:red&bold
-## Health
-#STATUSCOLOR=ill:red&inverse,foodpois:red&inverse,slime:red&inverse
-##
 OPTIONS=menucolors
 MENUCOLOR=" blessed "=green
 MENUCOLOR=" holy "=green
 MENUCOLOR=" cursed "=red
 MENUCOLOR=" unholy "=red
 MENUCOLOR=" cursed .* (being worn)"=orange&underline
-##OPTIONS=paranoid_hit,paranoid_quit,paranoid_remove
+
+OPTIONS=paranoid_confirmation:attack
 OPTIONS=sortloot:full
-##OPTIONS=win_edge
