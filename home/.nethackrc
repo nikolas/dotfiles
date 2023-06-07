@@ -8,6 +8,9 @@ OPTIONS=disclose:+aigcv
 OPTIONS=msg_window:combination
 OPTIONS=number_pad:0
 
+# NetHack 3.7
+OPTIONS=!safe_wait
+
 #OPTIONS=windowtype:X11
 
 # not sun-friendly :P
