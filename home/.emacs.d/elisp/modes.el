@@ -38,6 +38,10 @@
 (when (require 'whitespace-cleanup-mode nil 'noerror)
   (global-whitespace-cleanup-mode t))
 
+(with-eval-after-load 'php-mode
+  (setq php-mode-coding-style 'wordpress)
+  )
+
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 4)
 (setq sass-indent-offset 4)
