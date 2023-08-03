@@ -1,5 +1,5 @@
 OPTIONS=name:Lennart
-OPTIONS=pickup_types:$
+OPTIONS=autopickup,pickup_types:$
 OPTIONS=showexp,showscore,time,color
 OPTIONS=hitpointbar
 OPTIONS=autodig,boulder:0
@@ -10,6 +10,7 @@ OPTIONS=number_pad:0
 
 # NetHack 3.7
 OPTIONS=!safe_wait
+#OPTIONS=!tutorial
 
 #OPTIONS=windowtype:X11
 
