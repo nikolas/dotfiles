@@ -138,3 +138,5 @@
   (define-key rjsx-mode-map ">" nil))
 
 (add-to-list 'auto-mode-alist '("\\.es6$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.cjs$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.mjs$" . js-mode))
