@@ -5,6 +5,7 @@
 
 (when window-system
   (set-frame-parameter nil 'alpha-background 90)
+  (set-face-attribute 'default (selected-frame) :height 110)
   )
 
 ;(when window-system
