@@ -39,7 +39,7 @@
   (global-whitespace-cleanup-mode t))
 
 (with-eval-after-load 'php-mode
-  (setq php-mode-coding-style 'wordpress)
+  (setq php-enable-drupal-coding-style)
   )
 
 (autoload 'scss-mode "scss-mode")
