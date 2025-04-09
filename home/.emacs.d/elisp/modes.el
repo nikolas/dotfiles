@@ -38,9 +38,12 @@
 (when (require 'whitespace-cleanup-mode nil 'noerror)
   (global-whitespace-cleanup-mode t))
 
+; https://github.com/emacs-php/php-mode?tab=readme-ov-file#personal-settings
 (with-eval-after-load 'php-mode
-  (setq php-enable-drupal-coding-style)
-  )
+  (add-hook 'php-mode-hook #'my-php-mode-init)
+  (custom-set-variables
+   '(php-mode-coding-style 'drupal)
+   ))
 
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 4)
