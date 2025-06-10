@@ -38,12 +38,24 @@
 (when (require 'whitespace-cleanup-mode nil 'noerror)
   (global-whitespace-cleanup-mode t))
 
-; https://github.com/emacs-php/php-mode?tab=readme-ov-file#personal-settings
+; MediaWiki style https://www.mediawiki.org/wiki/User:ArielGlenn/Emacs_as_a_PHP_IDE
+(defun my-php-mode-hook ()
+  (setq indent-tabs-mode t)
+  (let ((my-tab-width 4))
+    (setq tab-width my-tab-width)
+    (setq c-basic-indent my-tab-width)
+    (set (make-local-variable 'tab-stop-list)
+         (number-sequence my-tab-width 200 my-tab-width))))
+
 (with-eval-after-load 'php-mode
-  (add-hook 'php-mode-hook #'my-php-mode-init)
-  (custom-set-variables
-   '(php-mode-coding-style 'drupal)
-   ))
+  (add-hook 'php-mode-hook 'my-php-mode-hook))
+
+; https://github.com/emacs-php/php-mode?tab=readme-ov-file#personal-settings
+;; (with-eval-after-load 'php-mode
+;;   (add-hook 'php-mode-hook #'my-php-mode-init)
+;;   (custom-set-variables
+;;    '(php-mode-coding-style 'psr2)
+;;    ))
 
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 4)
