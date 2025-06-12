@@ -50,30 +50,8 @@ export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin
 export PATH="$HOME/.bin:$HOME/.local/bin:$HOME/local/bin:$PATH"
 export PATH="/opt/ghc/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-#export PATH="$GOROOT/bin:$PATH"
-export PATH="$HOME/Android/Sdk/tools:$PATH"
-export PATH="$HOME/Android/Sdk/tools/bin:$PATH"
 export PATH="$PATH:$HOME/local/go/bin"
-
-export ANDROID_HOME="$HOME/Android/Sdk"
 
 color_my_prompt
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-
-if [ -x "$HOME/.pyenv/bin/pyenv" ]; then
-    export PATH="$HOME/.pyenv/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
-
-if [ -x "$HOME/.rbenv/bin/rbenv" ]; then
-    eval "$(rbenv init -)"
-fi
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-#if [ -x "$(which fortune)" ]; then
-#    fortune
-#fi
