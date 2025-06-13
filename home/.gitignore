@@ -40,7 +40,7 @@ tramp
 .DS_Store
 
 # virtualenv
-ve/
+#ve/
 venv/
 
 npm-debug.log
