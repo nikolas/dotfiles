@@ -1,12 +1,12 @@
 Config {
-  font = "-*-neep-medium-*-*-*-13-*-*-*-*-*-*-*"
+  font = "DejaVu Sans Mono 14"
   , additionalFonts = []
   --, borderColor = "black"
   , border = TopB
   , bgColor = "black"
-  , fgColor = "grey"
+  , fgColor = "white"
   , alpha = 100
-  , position = Bottom
+  , position = BottomH 30
   , textOffset = -1
   , iconOffset = -1
   , lowerOnStart = True
@@ -21,7 +21,7 @@ Config {
                                       "--normal","green",
                                       "--high","red",
                                       "--low","lightblue"] 36000
-               , Run Network "wlp12s0" ["-L","0","-H","32",
+               , Run Network "wlp0s20f3" ["-L","0","-H","32",
                                         "--normal","green","--high","red"] 10
                , Run Cpu ["-L","3","-H","50",
                            "--normal","green","--high","red"] 10
