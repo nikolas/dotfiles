@@ -36,7 +36,7 @@ myLayout = smartBorders (circleSimpleTabbed ||| tiled ||| Full)
     -- Percent of screen to increment by when resizing panes
     delta = 3 / 100
 
-main = xmonad $ ewmh $ defaultConfig {
+main = xmonad $ ewmh $ def {
   borderWidth = 1
   , focusedBorderColor = "pink"
   , modMask = mod4Mask
