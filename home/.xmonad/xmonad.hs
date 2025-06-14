@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Actions.NoBorders
 --import XMonad.Actions.Volume
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
 import XMonad.Layout.DecorationMadness
 --import XMonad.Layout.Gaps
@@ -22,7 +23,7 @@ myManageHook = composeAll
     , className =? "XEyes" --> doFloat
     , resource  =? "desktop_window" --> doIgnore ]
 
-myLayout = smartBorders (circleSimpleTabbed ||| tiled ||| Full)
+myLayout = smartBorders (circleSimpleDefault ||| tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled = Tall nmaster delta ratio
@@ -36,14 +37,14 @@ myLayout = smartBorders (circleSimpleTabbed ||| tiled ||| Full)
     -- Percent of screen to increment by when resizing panes
     delta = 3 / 100
 
-main = xmonad $ ewmh $ def {
+main = xmonad $ ewmh $ docks def {
   borderWidth = 1
   , focusedBorderColor = "pink"
   , modMask = mod4Mask
   , normalBorderColor = "black"
   , terminal = "urxvtc"
   , manageHook = myManageHook
-  , layoutHook = myLayout
+  , layoutHook = avoidStruts $ myLayout
   } `additionalKeys`
        [
          ((mod4Mask, xK_g), withFocused toggleBorder)
