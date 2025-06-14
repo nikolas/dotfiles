@@ -16,22 +16,27 @@ Config {
   , iconRoot = "."
   , allDesktops = True
   , overrideRedirect = True
-  , commands = [ Run Weather "KLGA" ["-t","<station>: <tempF>F",
-                                      "-L","64","-H","77",
-                                      "--normal","green",
-                                      "--high","red",
-                                      "--low","lightblue"] 36000
-               , Run Network "wlp0s20f3" ["-L","0","-H","32",
-                                        "--normal","green","--high","red"] 10
-               , Run Cpu ["-L","3","-H","50",
-                           "--normal","green","--high","red"] 10
-               , Run Memory ["-t","Mem: <usedratio>%"] 10
-               , Run Swap [] 10
-               , Run Com "uname" ["-s","-r"] "" 36000
-               , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-               ]
+  , commands = [
+      Run Weather "KLGA" [
+          "-t","<tempF>F",
+            "-L","64","-H","77",
+            "--normal","green",
+            "--high","red",
+            "--low","lightblue"] 36000
+      , Run Network "wlp0s20f3" [
+          "-L","0","-H","32",
+            "--normal","green","--high","red"] 10
+      --, Run Wireless "wlp0s20f3" [] 10
+      , Run Cpu ["-L","3","-H","50",
+                  "--normal","green","--high","red"] 10
+      , Run Memory ["-t","Mem: <usedratio>%"] 10
+      , Run Swap [] 10
+      , Run Com "uname" ["-s","-r"] "" 36000
+      , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+      , Run Volume "default" "Master" [] 10
+      ]
   , sepChar = "%"
   , alignSep = "}{"
   , template = "%cpu% %memory% * %swap% %wlp0s20f3% }\
-               \{ <fc=#ee9a00>%date%</fc> %KLGA% %uname%"
+               \{ <fc=#ee9a00>%date%</fc> %KLGA% %uname% %default:Master%"
   }
