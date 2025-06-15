@@ -38,5 +38,5 @@ Config {
   , sepChar = "%"
   , alignSep = "}{"
   , template = "%cpu% %memory% * %swap% %wlp0s20f3% }\
-               \{ <fc=#ee9a00>%date%</fc> %KLGA% %uname% %default:Master%"
+               \{ %KLGA% %uname% %default:Master% <fc=#ee9a00>%date%</fc>"
   }
