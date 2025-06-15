@@ -1,1 +1,2 @@
+pkill redshift; my_redshift &
 pkill urxvtd; urxvtd &

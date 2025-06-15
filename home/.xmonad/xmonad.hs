@@ -11,6 +11,7 @@ import XMonad.Prompt
 import XMonad.Prompt.Man
 --import XMonad.Layout.Accordion
 import XMonad.Util.EZConfig
+import Graphics.X11.ExtraTypes.XF86
 
 myManageHook = composeAll
     [ className =? "pidgin" --> doFloat
@@ -48,9 +49,12 @@ main = xmonad $ ewmh $ docks def {
   } `additionalKeys`
        [
          ((mod4Mask, xK_g), withFocused toggleBorder)
+
+       , ((0, xF86XK_AudioLowerVolume   ), spawn "amixer set Master 2-")
+       , ((0, xF86XK_AudioRaiseVolume   ), spawn "amixer set Master 2+")
+       , ((0, xF86XK_AudioMute          ), spawn "amixer set Master toggle")
+
+       , ((0, xF86XK_MonBrightnessUp   ), spawn "xbacklight +20")
+       , ((0, xF86XK_MonBrightnessDown   ), spawn "xbacklight -20")
          --((mod4Mask, xK_F1), manPrompt def)
-         --((mod4Mask, xK_F7), toggleMute    >> return ()),
-         --((mod4Mask, xK_F8 ), lowerVolume 3 >> return ()),
-         --((mod4Mask, xK_F9 ), raiseVolume 3 >> return ()),
-         --((mod4Mask, xK_F10), toggleMute    >> return ())
        ]

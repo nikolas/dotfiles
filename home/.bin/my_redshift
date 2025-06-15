@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-redshift -l 41:-74&
+redshift -l 41:-74 &
