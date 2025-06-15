@@ -1,6 +1,6 @@
 import XMonad
 import XMonad.Actions.NoBorders
---import XMonad.Actions.Volume
+import XMonad.Actions.Volume
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
@@ -50,9 +50,9 @@ main = xmonad $ ewmh $ docks def {
        [
          ((mod4Mask, xK_g), withFocused toggleBorder)
 
-       , ((0, xF86XK_AudioLowerVolume   ), spawn "amixer set Master 2-")
-       , ((0, xF86XK_AudioRaiseVolume   ), spawn "amixer set Master 2+")
-       , ((0, xF86XK_AudioMute          ), spawn "amixer set Master toggle")
+       , ((0, xF86XK_AudioLowerVolume   ), lowerVolume 3 >> return ())
+       , ((0, xF86XK_AudioRaiseVolume   ), raiseVolume 3 >> return ())
+       , ((0, xF86XK_AudioMute          ), toggleMute    >> return ())
 
        , ((0, xF86XK_MonBrightnessUp   ), spawn "xbacklight +20")
        , ((0, xF86XK_MonBrightnessDown   ), spawn "xbacklight -20")
