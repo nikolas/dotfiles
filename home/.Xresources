@@ -1,12 +1,12 @@
 URxvt*foreground: white
 !URxvt*background: black
-URxvt.perl-ext-common: default,tabbed
+URxvt.perl-ext-common: default,tabbed,selection-to-clipboard
 
 XTerm*foreground: white
 XTerm*background: black
 ! :(
-! XTerm*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
-! XTerm*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
+!XTerm*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
+!XTerm*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
 
 URxvt.depth: 32
 URxvt.background: rgba:0000/0000/0200/c800
