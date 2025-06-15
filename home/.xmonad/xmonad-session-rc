@@ -1,3 +1,5 @@
 pkill redshift; my_redshift &
 pkill urxvtd; urxvtd &
 pkill xmobar; xmobar &
+
+xps13.sh
