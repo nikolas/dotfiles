@@ -57,4 +57,6 @@ main = xmonad $ ewmh $ docks def {
        , ((0, xF86XK_MonBrightnessUp   ), spawn "xbacklight +20")
        , ((0, xF86XK_MonBrightnessDown   ), spawn "xbacklight -20")
          --((mod4Mask, xK_F1), manPrompt def)
+
+       , ((mod4Mask, xK_b     ), sendMessage ToggleStruts)
        ]
