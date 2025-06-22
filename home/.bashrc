@@ -70,6 +70,8 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 
 #export GOROOT="$HOME/go"
 export GOPATH="$HOME/gocode"
@@ -79,6 +81,9 @@ export PATH="$HOME/.bin:$HOME/.local/bin:$HOME/local/bin:$PATH"
 export PATH="/opt/ghc/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:$HOME/local/go/bin"
+
+export DEBEMAIL=nikolas@gnu.org
+export DEBFULLNAME='Nikolas Nyby'
 
 color_my_prompt
 
