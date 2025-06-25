@@ -1,5 +1,3 @@
-(setq menu-bar-mode nil)
-
 ; Set background color for highlight face to red
 (set-face-attribute 'highlight nil :background "#ff0000")
 
