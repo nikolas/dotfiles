@@ -1,5 +1,5 @@
-pkill redshift; my_redshift &
+pkill redshift; $HOME/.bin/my_redshift &
 pkill urxvtd; urxvtd &
 pkill xmobar; xmobar &
 
-xps13.sh
+$HOME/.bin/xps13.sh
