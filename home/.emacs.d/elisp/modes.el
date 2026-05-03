@@ -109,9 +109,14 @@
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
-(setq-default c-basic-offset 4
-              tab-width 4
+(setq-default tab-width 4
               indent-tabs-mode t)
+
+(setq c-default-style "stroustrup")
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (setq c-basic-offset 4)))
 
 ;; (add-hook 'c-mode-hook
 ;;           (lambda ()
