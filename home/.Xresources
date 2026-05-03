@@ -1,6 +1,6 @@
 URxvt*foreground: white
 !URxvt*background: black
-URxvt.perl-ext-common: default,tabbed,selection-to-clipboard
+URxvt.perl-ext-common: default,tabbed,clipboard,selection-to-clipboard
 
 XTerm*foreground: white
 XTerm*background: black
