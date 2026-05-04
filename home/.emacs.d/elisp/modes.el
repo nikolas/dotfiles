@@ -112,7 +112,8 @@
 
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (setq c-basic-offset 4)))
+            (setq c-basic-offset 4
+                  indent-tabs-mode t)))
 
 ;; (add-hook 'c-mode-hook
 ;;           (lambda ()
