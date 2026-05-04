@@ -71,6 +71,20 @@
 (setq nxml-child-indent 4)
 
 ;; C
+
+(setq-default tab-width 4
+              indent-tabs-mode t)
+
+(setq c-default-style "stroustrup")
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (setq c-basic-offset 4
+                  indent-tabs-mode t)))
+
+;; indented switch/case
+(c-set-offset 'case-label '+)
+
 (setq mustache-basic-offset 4)
 
 (when (require 'icicles nil 'noerror)
@@ -105,15 +119,6 @@
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
-(setq-default tab-width 4
-              indent-tabs-mode t)
-
-(setq c-default-style "stroustrup")
-
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (setq c-basic-offset 4
-                  indent-tabs-mode t)))
 
 ;; (add-hook 'c-mode-hook
 ;;           (lambda ()
