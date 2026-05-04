@@ -71,10 +71,6 @@
 (setq nxml-child-indent 4)
 
 ;; C
-(setq c-basic-offset 4)
-(setq indent-tabs-mode nil)
-(setq-default indent-tabs-mode nil)
-
 (setq mustache-basic-offset 4)
 
 (when (require 'icicles nil 'noerror)
