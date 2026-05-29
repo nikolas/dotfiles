@@ -1,1 +1,0 @@
-(setq save-abbrevs nil)

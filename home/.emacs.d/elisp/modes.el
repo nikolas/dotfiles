@@ -23,14 +23,6 @@
   (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
   )
 
-;; org
-(require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
-(if (file-exists-p "~/org")
-  (setq org-agenda-files (directory-files "~/org" t "\.org$")))
-
 ;; window-number
 (when (require 'window-number nil 'noerror)
   (window-number-mode 1)
@@ -53,13 +45,6 @@
 (with-eval-after-load 'php-mode
   (add-hook 'php-mode-hook 'my-php-mode-hook))
 
-; https://github.com/emacs-php/php-mode?tab=readme-ov-file#personal-settings
-;; (with-eval-after-load 'php-mode
-;;   (add-hook 'php-mode-hook #'my-php-mode-init)
-;;   (custom-set-variables
-;;    '(php-mode-coding-style 'psr2)
-;;    ))
-
 (autoload 'scss-mode "scss-mode")
 (setq css-indent-offset 4)
 (setq sass-indent-offset 4)
@@ -73,14 +58,14 @@
 ;; C
 
 (setq-default tab-width 4
-              indent-tabs-mode t)
+              indent-tabs-mode nil)
 
 (setq c-default-style "stroustrup")
 
 (add-hook 'c-mode-common-hook
           (lambda ()
             (setq c-basic-offset 4
-                  indent-tabs-mode t)))
+                  indent-tabs-mode nil)))
 
 ;; indented switch/case
 (c-set-offset 'case-label '+)
@@ -99,7 +84,6 @@
 (setq web-mode-style-padding 0)
 (setq web-mode-script-padding 0)
 
-; :3
 (defun c-lineup-arglist-tabs-only (ignored)
   "Line up argument lists by tabs, not spaces"
   (let* ((anchor (c-langelem-pos c-syntactic-element))
@@ -118,44 +102,6 @@
                         (arglist-cont-nonempty
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
-
-
-;; (add-hook 'c-mode-hook
-;;           (lambda ()
-;;             (let ((filename (buffer-file-name)))
-;;               ;; Enable kernel mode for the appropriate files
-;;               (when (and filename
-;;                          (string-match (expand-file-name "~/src/kernels")
-;;                                        filename))
-;;                 (setq indent-tabs-mode t)
-;;                 (setq show-trailing-whitespace t)
-;;                                 (c-set-style "linux-tabs-only")))))
-
-(when (require 'web-mode nil 'noerror)
-  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-  (setq web-mode-engines-alist
-        '(("django" . "/d/.*\\.html\\'")
-          ("go" . "/src/digitaltibet/.*\\.html\\'"))
-        )
-  )
-
-
-;; (when (require 'web-mode nil 'noerror)
-;;   (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
-;;   (defadvice web-mode-highlight-part (around tweak-jsx activate)
-;;     (if (equal web-mode-content-type "jsx")
-;;         (let ((web-mode-enable-part-face nil))
-;;           ad-do-it)
-;;       ad-do-it)))
-
-;; (when (require 'web-mode nil 'noerror)
-;;   (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
-;;   (defadvice web-mode-highlight-part (around tweak-jsx activate)
-;;     (if (equal web-mode-content-type "js")
-;;         (let ((web-mode-enable-part-face nil))
-;;           ad-do-it)
-;;       ad-do-it)))
-;; (add-to-list 'auto-mode-alist '("src\\/.*\\.js\\'" . rjsx-mode))
 
 (with-eval-after-load 'rjsx-mode
   (define-key rjsx-mode-map "<" nil)
