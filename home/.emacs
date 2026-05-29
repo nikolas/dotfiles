@@ -44,15 +44,6 @@
      (340 . "#e7c547") (360 . "#b9ca4a")))
  '(vc-annotate-very-old-color nil)
  '(vc-follow-symlinks t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(magit-diff-added ((t (:foreground "#00ff00"))))
- '(magit-diff-added-highlight ((t (:foreground "#00ee00"))))
- '(magit-diff-removed ((t (:foreground "#ff0000"))))
- '(magit-diff-removed-highlight ((t (:foreground "#ee0000")))))
 
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
@@ -61,7 +52,6 @@
 (load-library "keys")
 (load-library "modes")
 (load-library "random")
-(load-library "abbrevs")
 (load-library "style")
 
 (if (not (getenv "TERM_PROGRAM"))
@@ -80,14 +70,5 @@
 
 ;; automatically clean up bad whitespace
 (setq whitespace-action '(auto-cleanup))
-
-(require 'rcirc)
-(rcirc-track-minor-mode 1)
-(setq rcirc-omit-responses '("JOIN" "PART" "QUIT" "NICK" "AWAY"))
-(setq rcirc-server-alist
-      '(("chat.freenode.net" :channels ("#tesc" "#sxemacs"))
-        ("irc.esper.net" :channels ("#datafruitsouth"))))
-(setq rcirc-default-nick "dobie_gillis")
-
 
 ;~~~~~~~~~~----______________
