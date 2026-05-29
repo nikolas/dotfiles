@@ -19,7 +19,7 @@
 
 (setq mail-host-address "gnu.org")
 (setq user-mail-address "nikolas@gnu.org")
-(setq user-full-name "Nik Nyby")
+(setq user-full-name "Nikolas Nyby")
 
 (spam-initialize)
 
