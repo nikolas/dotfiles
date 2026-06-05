@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+gammastep -l 41:-74 &
