@@ -1,21 +1,11 @@
-alias ':P'='homeshick pull dotfiles'
-
-alias b='bzr'
-alias bs='bzr status'
-
 alias s='git status'
 alias d='git diff'
 alias l='git log'
 alias gfo='git fetch origin'
 alias gfu='git fetch upstream'
-alias gcm='git checkout master'
-alias gcmm='git checkout main'
-alias gcd='git checkout -- .'
+alias gsm='git show-ref --verify --quiet refs/heads/master && git switch master || git switch main'
 # git branch-sort
 alias gbs='git for-each-ref --sort=committerdate refs/heads/'
-
-alias be='bundle exec'
-alias br='bundle exec rake'
 
 alias e='emacs -nw'
 alias ec='emacsclient -c'
