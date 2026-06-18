@@ -1,12 +1,3 @@
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives
-               '("gnu" . "https://elpa.gnu.org/packages/") t)
-  (add-to-list 'package-archives
-               '("melpa" . "https://melpa.org/packages/") t)
-  )
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,14 +49,10 @@
 
 (setq vc-handled-backends ())
 
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-(setq scss-compile-at-save nil)
-
 ;; No tabs...
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq sgml-basic-offset 4)
-(setq handlebars-basic-offset 4)
 
 ;; automatically clean up bad whitespace
 (setq whitespace-action '(auto-cleanup))

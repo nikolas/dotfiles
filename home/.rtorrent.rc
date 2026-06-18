@@ -1,2 +1,0 @@
-directory = /home/nik/torrents
-schedule = watch_directory, 5, 5, "load.start=/home/nik/torrents/watch/*.torrent"
