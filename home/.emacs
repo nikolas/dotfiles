@@ -51,7 +51,6 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 (load-library "keys")
 (load-library "modes")
-(load-library "random")
 (load-library "style")
 
 (if (not (getenv "TERM_PROGRAM"))
