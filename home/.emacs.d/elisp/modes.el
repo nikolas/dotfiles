@@ -35,7 +35,7 @@
 
 ; MediaWiki style https://www.mediawiki.org/wiki/User:ArielGlenn/Emacs_as_a_PHP_IDE
 (defun my-php-mode-hook ()
-  (setq indent-tabs-mode t)
+  (setq indent-tabs-mode nil)
   (let ((my-tab-width 4))
     (setq tab-width my-tab-width)
     (setq c-basic-indent my-tab-width)
