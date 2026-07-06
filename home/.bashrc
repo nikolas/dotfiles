@@ -76,11 +76,7 @@ export HISTFILESIZE=10000
 #export GOROOT="$HOME/go"
 export GOPATH="$HOME/gocode"
 
-export PATH="$HOME/.cabal/bin:$HOME/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.bin:$HOME/.local/bin:$HOME/local/bin:$PATH"
-export PATH="/opt/ghc/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$PATH:$HOME/local/go/bin"
 
 export DEBEMAIL=nikolas@gnu.org
 export DEBFULLNAME='Nikolas Nyby'

@@ -4,6 +4,7 @@ alias l='git log'
 alias gfo='git fetch origin'
 alias gfu='git fetch upstream'
 alias gsm='git show-ref --verify --quiet refs/heads/master && git switch master || git switch main'
+
 # git branch-sort
 alias gbs='git for-each-ref --sort=committerdate refs/heads/'
 
@@ -13,12 +14,6 @@ alias eq='emacs -nw -Q'
 alias ekill='emacsclient -e "(kill-emacs)"'
 
 alias xup='xrdb ~/.Xresources'
-
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  alias ls='ls -F --color'
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-  alias ls='ls -FG'
-fi
 
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 complete -F _quilt_completion -o filenames dquilt
