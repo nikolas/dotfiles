@@ -20,10 +20,10 @@
  '(fci-rule-color "#2a2a2a")
  '(git-gutter:handled-backends '(git))
  '(package-selected-packages
-   '(ag git-gutter go-mode haskell-mode mustache-mode nginx-mode php-mode
-        rjsx-mode rust-mode salt-mode scss-mode svelte-mode
-        terraform-mode tuareg typescript-mode web-mode
-        whitespace-cleanup-mode window-number yaml-mode))
+   '(ag diff-hl haskell-mode mustache-mode nginx-mode php-mode rjsx-mode
+        rust-mode scss-mode svelte-mode terraform-mode tuareg
+        typescript-mode web-mode whitespace-cleanup-mode window-number
+        yaml-mode))
  '(standard-indent 4)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
@@ -58,3 +58,9 @@
 (setq whitespace-action '(auto-cleanup))
 
 ;~~~~~~~~~~----______________
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
