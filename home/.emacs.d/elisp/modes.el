@@ -1,13 +1,3 @@
-(menu-bar-mode -1)
-
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
-
-(display-time-mode 1)
-(show-paren-mode 1)
-(if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (boundp 'fringe-mode) (fringe-mode 0))
-
 (setq gnus-use-full-window nil)
 
 ;; dirtree
