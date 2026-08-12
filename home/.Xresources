@@ -1,12 +1,8 @@
 URxvt*foreground: white
-!URxvt*background: black
 URxvt.perl-ext-common: default,tabbed,clipboard,selection-to-clipboard
 
 XTerm*foreground: white
 XTerm*background: black
-! :(
-!XTerm*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
-!XTerm*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
 
 URxvt.depth: 32
 URxvt.background: rgba:0000/0000/0200/c800
@@ -16,10 +12,6 @@ urxvt*transparent: true
 urxvt*shading: 15
 
 *scrollBar: false
-!*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
-!*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
-!*font: -*-neep-medium-*-*-*-20-*-*-*-*-*-*-*
-!*boldFont: -*-neep-bold-*-*-*-20-*-*-*-*-*-*-*
 
 *color0:  #2E3436
 *color1:  #a40000
@@ -37,8 +29,3 @@ urxvt*shading: 15
 *color13: #AD7FA8
 *color14: #fcaf3e
 *color15: #EEEEEC
-
-!Xft.antialias:                 true
-!Xft.hinting:                   true
-!Xft.hintstyle:                 hintfull
-!Xft.rgba:                      rgb
